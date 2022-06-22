@@ -1,207 +1,182 @@
-import { Container, Row, Col,Button} from 'react-bootstrap';
+import guy1 from './Assets/guy1.png';
+import guy2 from './Assets/guy2.png';
+import guy3 from './Assets/guy3.png';
+import guy4 from './Assets/guy4.png';
+import guy5 from './Assets/guy5.png';
+import guy6 from './Assets/guy6.png';
+import guy7 from './Assets/guy7.png';
+import meet1 from './Assets/bread.png';
+import meet2 from './Assets/orlado.png';
+import meet3 from './Assets/sammy.png';
+import meet4 from './Assets/eitaro.png';
+import meet5 from './Assets/luigi.png';
+import meet6 from './Assets/morel.png';
+import meet7 from './Assets/paul.png';
+// BUBBLE
+import bubble from './Assets/bubble.png';
 import { Link } from 'react-router-dom';
-import story_img from './Assets/story-img1.png' 
-import story_img2 from './Assets/story-img2.png' 
-import ques_mark from './Assets/ques_mark.png' 
-import house_img1 from './Assets/house-img1.png' 
-import house_img2 from './Assets/house-img2.png' 
-import house_img3 from './Assets/house-img2.png' 
-import roadmap_img from './Assets/roadmap-img1.png' 
-import bats_img from './Assets/Bats-img.gif'  
-import bat_voice from './Assets/bat-voice.mp3'  
-import $ from 'jquery' 
-
-// SITE LOGO
-import sitelogo from './Assets/logo.png';
-import React, { useState } from 'react';
+import { Container, Row, Col } from 'react-bootstrap';
+// AOS
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-AOS.init();
+
+
+AOS.init({
+      offset: 200,
+      duration: 1000,
+      easing: 'ease-in-sine',
+      delay: 1000,
+});
 
 function App() {
-  const [show, setShow] = useState(false);
-
-  const handleClose = () => setShow(false);
-  const handleShow = () => setShow(true);
-  let [hideVideo, setHideVideo] = useState(0);
-  function playVid() {
-    var vid = document.getElementById("myVideo");
-      vid.play();
-      var element = document.getElementById("play-btn");
-     element.classList.add("mystyle");
-  }
-
-  
   return (
+    
     <section className='main'>
-   <Container>
-   <Row>
-     <Col md={5}></Col>
-     <Col md={7}>
-     <div className="banner-heading">
-     <h4>Killer Club </h4>
-     <h3>House</h3>
-   <div className="banner-btn">
-   <Link to="/mint">explore the club house</Link>
-   </div>  
-     </div>
-       
-     </Col>
-   </Row>
-   </Container>
-   {/* story section  */}
-   <div className='story-sec'>
-   <Container>
-   <Row>
-   <Col md={6}>
-    <div className="story-img"  data-aos="fade-right" data-aos-delay="300" data-aos-duration='3000'>
-      <img src={story_img} alt='img'/>
-    </div>
-   </Col>
-   <Col md={6}>
-   <div className="story-txt" data-aos="zoom-in" data-aos-delay="300" data-aos-duration='3000'>
-     <div className="sword">
-     <img src={story_img2} alt='img'/>
-     </div>
-    <div className="story-content" data-aos="fade-left" data-aos-delay="300" data-aos-duration='3000'>
-      <h3>Killer Club House</h3>
-      <p>Every summer as kids, we would travel to my aunt's farm on the creek, where we had very fond memories catching crawfish, fishing, swimming and bonding together over campfire weenies in the evening. Under the circumstances of my aunt's death, I was unable to absorb the typical nostalgic feeling you would get. </p>
-      <p>The weather started to shift from a warm summer evening into a mix of heavy rain and thunder. The creepy hotel I had seen 30 miles back seemed like heaven to me at this point. However, I was running late and, determined to be at the funeral, refused to stop anymore. </p>
-      <div className="banner-btn">
-   <Link to="/story">read more</Link>
-   </div>
-    </div>
-     </div>
-   </Col>
-   </Row>
-   </Container>
-   </div>
-   {/* story section End */}
-   {/* collection  */}
-   <div className="collection" data-aos="zoom-in" data-aos-delay="300" data-aos-duration='3000'>
-     <h2>collection</h2>
-   </div>
-   {/* collection End */}
-   {/* killer club house  */}
-   <Container>
-   <div className="killer-house">
-     <h2>killer club house</h2>
-     <div className="killer-house-img">
-     <Row>
-       <Col md={4}>
-          <div className="killer-img"><img src={ques_mark} alt='img' /></div>  
-       </Col>
-       <Col md={4}><div className="killer-img-main"><img src={ques_mark} alt='img' /></div>  </Col>
-       <Col md={4}><div className="killer-img"><img src={ques_mark} alt='img' /></div>  </Col>
-     </Row>
-     </div>
-
-   </div>
-   </Container>
-
-   {/* killer club house End */}
-   {/* roadmap heading  */}
-   <Container>
-   <div className="roadmap-head" data-aos="zoom-in" data-aos-delay="300" data-aos-duration='3000'>
-      <h2>roadmap</h2>
-    </div>
-   </Container>
-
-   {/* roadmap heading End */}
-
-    {/* main roadmap  */}
-    <Container>
-    <div className="road">
-    <div className="road-img">
-   <img src={roadmap_img} alt="img" />
-   <div className="roadmap-card">
-    <div className='inner-road'>
-    <a href='javascript:void(0)' className='click-span'>1</a>
-    <div className='road-card'>
-    <div className="card-head">
-    <h3>Phase 1</h3>
-       <h5>Project Planning And Research</h5>
-       <h5>Rendering Getting Final Stages Ready For Launch</h5>
-       </div>
-    </div>
-    <div className="bat"> <img src={bats_img} alt="img" />
-   <div className={"video-player"+' '+"audio-player"+(hideVideo==1?' video-hider':'')}>
-      <audio onEnded={() => setHideVideo(1)} width="100%" id='myAudio'>
-        <source src={bat_voice} type="video/mp3" />
-        <source src={bat_voice} type="video/ogg" />
-      </audio>
-    </div>
-     </div>
-    </div>
-   </div>
-   <div className="roadmap-card left-cd">
-    <div className='inner-road'>
-    <a href='javascript:void(0)' className='click-span'>2</a>
-    <div className='road-card'>
-    <div className="card-head">
-    <h3>Phase 2</h3>
-    <h5>Start Game Production</h5>
-       <h5>Website Released</h5>
-       <h5>Build community</h5>
-       <h5>Living Room Released 2222 Nfts</h5>
-       <h5>1 Of 1 Super Legendary Gif Nft Giveaway</h5>
-       <h5>Secure Metaverse Partnership</h5>
-       <h5>Early Active Community Members Can Secure Perks And Guarantee A Clubhouse Nft</h5>
-       <h5>Fun Competitions And Giveaways</h5>
-       <h5>Ada Giveaways</h5>
-       <h5>2nd Clubhouse Drop 2222 Nfts</h5>
-       </div>
-    </div>
-    <div className="bat"> <img src={bats_img} alt="img" /></div>
-    </div>
-   </div>
-   <div className="roadmap-card right-cd">
-    <div className='inner-road'>
-    <a href='javascript:void(0)' className='click-span'>3</a>
-    <div className='road-card right-card'>
-    <div className="card-head">
-    <h3>Phase 3</h3>
-    <h5>3rd Clubhouse Released 2222 Nfts</h5>
-       <h5>Stake Pool With Metaverse And Gaming Projects Bring Utility To Holders And The Ecosystem</h5>
-       <h5>“Token” Release For Game In Qtr 4</h5>
-       <h5>Promos/Previews For The Game</h5>
-       <h5>4th Clubhouse Release 2222 Nfts</h5>
-       <h5>Preparation For Cnft Con</h5>
-       </div>
-    </div>
-    <div className="bat left-bat"> <img src={bats_img} alt="img" /></div>
-    </div>
-   </div>
-   <div className="roadmap-card end-cd">
-    <div className='inner-road'>
-    <a href='javascript:void(0)' className='click-span'>4</a>
-    <div className='road-card end-card'>
-    <div className="card-head">
-    <h3>Phase 4</h3>
-    <h5>Final Room Drop Of Series 2222 Nfts Game Launch</h5>
-    </div>
-    </div>
-    <div className="bat end-bat"> <img src={bats_img} alt="img" /></div>
-    </div>
-   </div>
-   </div>
-   </div>
-   
-    </Container>
-   
-    {/* main roadmap End */}
-
-
-
-
-
-
-
-
-
-
-
-    </section>
+      <Container>
+      <div className='topbanner'>
+          <ul>
+            <li  data-aos='fade-down'>
+               <img src={guy1} alt='' className='bimg-1' />
+            </li >
+            <li  data-aos="fade-down">
+            <img src={guy2} alt='' className='bimg-3'/>
+            </li>
+            <li  data-aos="fade-down">
+            <img src={guy3} alt='' className='bimg-5' />
+            </li>
+            <li  data-aos="fade-down">
+            <img src={guy4} alt='' className='bimg-7' />
+            </li>
+          </ul>
+          <ul>
+            <li data-aos='fade-up'>
+            <img src={guy5} alt='' className='bimg-2'/>
+            </li>
+            <li data-aos='fade-up'>
+            <img src={guy6} alt='' className='bimg-4' />
+            </li>
+            <li data-aos='fade-up'>
+            <img src={guy7} alt='' className='bimg-6' />
+            </li>
+          </ul>
+        
+      </div>
+      <div className='live-minting'>
+        <h3>
+        Series 2 Coming Soon
+        </h3>
+        {/* <h4>
+          mint count: 765/1050
+        </h4>
+        <Link to="/minthere" className='all-btns mint-btn'>Mint here</Link> */}
+        <p>Holders of a FunGuy from Series 1 or a FunGirl from Series 2 (coming in Q2)
+           will be eligbile to stake their NFTs starting in Q2, 2022! Check out our utility plans 
+           <Link as={Link} to="/utility" >Here</Link>
+           </p>
+      </div>
+      <div className='meet-guys'>
+        <div className='meetguys-head'>
+        <h5>Meet the FunGuys!</h5>
+        <p>The year is 7070 and mushrooms have taken 
+          over the world and are now the dominant species
+           (yes you read that right!). They have evolved and 
+           can now walk, talk and live in an all round fun society. 
+           These adorable little beings somehow managed to overthrow
+            humans to become the super species of the planet and are now 
+            having a really great time.  A diverse group of friends which 
+            call themselves the fun-guys (very much pun intended!) all live 
+            in the same city, New Mush City from the country of Fungland! The 
+            group of 7 friends are each different varieties of common mushrooms 
+            which are found throughout the land. Why don't you get to know the
+             mushrooms below.......</p>
+        </div>
+             <Row>
+               <Col sm={4}>
+               <img src={meet1} alt='' className='flt-rgt'/>
+               </Col>
+               <Col sm={4}>
+                 <h5>Brad the Button</h5>
+                 <p>Brad is a button mushroom, the most common mushroom throughout the land. He is highly sociable and loves hanging out with his mates. He works as a farmer, making sure that all his fellow mushrooms have enough food so they can grow big and strong.</p>
+               </Col>
+               <Col sm={4}>
+                 
+               </Col>
+             </Row>
+             <Row>
+               <Col sm={4}>
+               
+               </Col>
+               <Col sm={4}>
+                 <h5>Orlando the Oyster</h5>
+                 <p>Orlando is an Oyster mushroom and like Brad is also a fairly common mushroom to be found. He comes from a family of 12 of which he is the oldest. Orlando loves playing sports, his favorite is stemball which is much like soccer we play today. He works as Chef and his specialty is spaghetti sawdust bolognese.</p>
+               </Col>
+               <Col sm={4}>
+               <img src={meet2} alt='' className='flt-lft'/>
+               </Col>
+             </Row>
+             <Row>
+               <Col sm={4}>
+               <img src={meet3} alt='' className='flt-rgt'/>
+               </Col>
+               <Col sm={4}>
+                 <h5>Sammy the Shiitake</h5>
+                 <p>Sammy is a Shiitake mushroom with a big cap. Shiitake mushrooms are found all over the world but are not as common as Oyster or Button mushrooms. Sammy is a doctor who works for the Fungland Hospital. In his spare time he enjoys spending his money on lavish holidays and driving round his sports cars.</p>
+               </Col>
+               <Col sm={4}>
+                 
+               </Col>
+             </Row>
+             <Row>
+               <Col sm={4}>
+               
+               </Col>
+               <Col sm={4}>
+                 <h5>Eitaro the Enoki</h5>
+                 <p>Eitaro is an Enoki mushroom born in Japan.  He moved to Fungland when he was 18 years old and has felt right at home ever since. Enoki’s are much harder to come by than Button, Oyster, Shiitake or Lions Mane mushrooms but are usually great fun to be around. Teaching languages is Eitaro’s profession, and he also loves to play sports when he is not working. He plays on the same stemball team as Orlando.  He is married to a beautiful FunGirl who you’ll meet in the next series!</p>
+               </Col>
+               <Col sm={4}>
+               <img src={meet4} alt='' className='flt-lft'/>
+               </Col>
+             </Row>
+             <Row>
+               <Col sm={4}>
+               <img src={meet5} alt='' className='flt-rgt'/>
+               </Col>
+               <Col sm={4}>
+                 <h5>Luigi the Lion's Mane</h5>
+                 <p>Luigi is a Lion's Mane mushroom and is the cool one of the group. He has the distinctive long hair and loves skateboarding at the local park. His favorite trick is the 360 heelflip off a tree stump. He is also a hit with the fun-girls and you will often find him out on various dates. He works two different jobs as a lifeguard by day and waiter by night.</p>
+               </Col>
+               <Col sm={4}>
+                 
+               </Col>
+             </Row>
+             <Row>
+               <Col sm={4}>
+               
+               </Col>
+               <Col sm={4}>
+                 <h5>Mo the Morel</h5>
+                 <p>Mo is a Morel mushroom and is one of the least common mushrooms you will see in Fungland. He is shy and reserved, but when you get to know him, he is quite the comedian. He works for the local phone service provider called Mycelial Networks Ltd. In his spare time, he loves going to the cinema and watching the latest movie releases. As you can see here, he's not a fan of avocados.....</p>
+               </Col>
+               <Col sm={4}>
+               <img src={meet6} alt='' className='flt-lft'/>
+               </Col>
+             </Row>
+             <Row>
+               <Col sm={4}>
+               <img src={meet7} alt='' className='flt-rgt'/>
+               </Col>
+               <Col sm={4}>
+                 <h5>Paul the Penis Envy</h5>
+                 <p>Paul is a type of psychedelic mushroom called Penis Envy (Yes this is a real mushroom…!). As you may expect, he’s a very chilled and relaxed guy, not much phases him. He is often high on life and thinks there should be more loving in the world. He is an entrepreneur and is currently trying to launch his start-up business, ‘Mushrooms on Marijuana’ up and running. He is quite the character, but a really rare find!</p>
+               </Col>
+               <Col sm={4}>
+                 
+               </Col>
+             </Row>
+      </div>
+      </Container>
+    </section >
   );
 }
 
