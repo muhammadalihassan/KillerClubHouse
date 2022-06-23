@@ -7,13 +7,8 @@ import App from './App';
 import Header from './Extends/Header';
 import Footer from './Extends/Footer';
 import reportWebVitals from './reportWebVitals';
-
-import Minthere from "./Views/Minthere/Index";
-import Utility from "./Views/Utility/Index";
 import About from "./Views/About/Index";
-import FAQ from "./Views/FAQ/Index";
-import Roadmap from "./Views/Roadmap/Index";
-import Staking from "./Views/Staking/Index";
+
 class Main extends React.Component {
   render() {
     return (
@@ -23,12 +18,7 @@ class Main extends React.Component {
     </header>
     <Routes>
       <Route path="/" element={<App />} />
-      <Route path="minthere" element={<Minthere />} />
-      <Route path="Utility" element={<Utility />} />
       <Route path="About" element={<About />} />
-      <Route path="FAQ" element={<FAQ />} />
-      <Route path="Roadmap" element={<Roadmap />} />
-      <Route path="Staking" element={<Staking />} />
     </Routes>
     <footer>
       <Footer />
