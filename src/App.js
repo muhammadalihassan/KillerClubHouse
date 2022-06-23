@@ -5,6 +5,10 @@ import t3 from './Assets/t3.jpg';
 import t4 from './Assets/t4.jpg';
 import t5 from './Assets/t5.jpg';
 import t6 from './Assets/t6.jpg';
+import tomb1 from './Assets/tomb1.png';
+import tomb2 from './Assets/tomb2.png';
+import tomb3 from './Assets/tomb3.png';
+import tomb4 from './Assets/tomb4.png';
 import { Link } from 'react-router-dom';
 import { Container, Row, Col, Accordion } from 'react-bootstrap';
 // AOS
@@ -26,14 +30,43 @@ function App() {
       <div className='index-main'>
         <Container>
           <div className='banner-main'>
-            <h6>welcome to killer club</h6>
-            <h1>house</h1>
+            <h6>welcome to killer </h6>
+            <h1 data-aos="fade-down">club house</h1>
             <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since...</p>
             <Link as={Link} to="/" className='button-r'>explore the club house</Link>
           </div>
+          <div className='tomb-sec'>
+            <Row>
+              <Col md={2}>
+                <div className='tombs' data-aos="fade-up-right">
+                  <img src={tomb1} />
+                  <div className='tomb-txt-l'><Link to="/">Lorem</Link></div>
+                </div>
+              </Col>
+              <Col md={2}>
+                <div className='tombs' data-aos="fade-up-right">
+                  <img src={tomb3} />
+                  <div className='tomb-txt-s'><Link to="/">Lorem</Link></div>
+                </div>
+              </Col>
+              <Col md={4}></Col>
+              <Col md={2}>
+                <div className='tombs' data-aos="fade-up-left">
+                  <img src={tomb3} />
+                  <div className='tomb-txt-s'><Link to="/">Lorem</Link></div>
+                </div>
+              </Col>
+              <Col md={2}>
+                <div className='tombs' data-aos="fade-up-left">
+                  <img src={tomb4} />
+                  <div className='tomb-txt-l'><Link to="/">Lorem</Link></div>
+                </div>
+              </Col>
+            </Row>
+          </div>
           <div className='red-boxes'>
             <div className='about-txt'>
-              <h2 className='big-txt'>about us</h2>
+              <h2 className='big-txt' data-aos="zoom-in">about us</h2>
               <div className='abt-headings'>
               <h3 className='small-txt'>killer club house about</h3>
               <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
@@ -43,9 +76,9 @@ function App() {
               
             </div>
           </div>
-          <div className='red-boxes'>
+          <div className='red-boxes' id="story">
             <div className='story-txt'>
-            <h2 className='big-txt'>story</h2>
+            <h2 className='big-txt' data-aos="zoom-in">story</h2>
               <Row>
                 <Col md={12} lg={6} xl={6}>
                 <img src={story} />
@@ -64,17 +97,17 @@ function App() {
               </Row>
             </div>
           </div>
-          <div className='red-boxes'>
+          <div className='red-boxes' id="road">
             <div className='roadmap-txt'>
-              <h2 className='big-txt'>roadmap</h2>
+              <h2 className='big-txt' data-aos="zoom-in">roadmap</h2>
               <div className='abt-headings'>
               <h3 className='small-txt'>the killer journey</h3>
               </div>
             </div>
           </div>
-          <div className='red-boxes'>
+          <div className='red-boxes' id="team">
             <div className='team-txt'>
-              <h2 className='big-txt'>team</h2>
+              <h2 className='big-txt' data-aos="zoom-in">team</h2>
               <div className='abt-headings'>
               <h3 className='small-txt'>killer club house team</h3>
               </div>
@@ -154,9 +187,9 @@ function App() {
               </Row>
             </div>
           </div>
-          <div className='red-boxes'>
+          <div className='red-boxes' id="faq">
             <div className='faq-txt faq-sec'>
-              <h2 className='big-txt'>faq's</h2>
+              <h2 className='big-txt' data-aos="zoom-in">faq's</h2>
               <div className='abt-headings'>
               <h3 className='small-txt'>frequently asked questions</h3>
               </div>

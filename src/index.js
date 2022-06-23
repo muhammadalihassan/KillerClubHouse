@@ -12,8 +12,9 @@ import About from "./Views/About/Index";
 class Main extends React.Component {
   render() {
     return (
-  <BrowserRouter>
-   <header className='pageheader'>
+  <BrowserRouter basename="/killer-club-house">
+  <div className='overlay'>
+  <header className='pageheader'>
       <Header />
     </header>
     <Routes>
@@ -23,6 +24,8 @@ class Main extends React.Component {
     <footer>
       <Footer />
     </footer>
+  </div>
+  
   </BrowserRouter>
   // document.getElementById('root')
 );
