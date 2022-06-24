@@ -34,24 +34,14 @@ function Footer() {
       <div className='footer-btm'>
         <p>© 2022 Lorem Ipsum. All Rights Reserved</p>
         <ul>
-        <li>
-                <a href='#' className='fb'>
-                   <FontAwesomeIcon icon={brands('facebook-f')} />
-                </a>
-              </li>
               <li>
                 <a href='#' className='twt'>
                    <FontAwesomeIcon icon={brands('twitter')} />
                 </a>
               </li>
               <li>
-                <a href='#' className='insta'>
-                   <FontAwesomeIcon icon={brands('instagram')} />
-                </a>
-              </li>
-              <li>
                 <a href='#' className='twi'>
-                   <FontAwesomeIcon icon={brands('twitch')} />
+                   <FontAwesomeIcon icon={brands('discord')} />
                 </a>
               </li>
         </ul>

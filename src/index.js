@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { Component, useState } from 'react';
+
 import ReactDOM from 'react-dom';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -8,12 +9,65 @@ import Header from './Extends/Header';
 import Footer from './Extends/Footer';
 import reportWebVitals from './reportWebVitals';
 import About from "./Views/About/Index";
-
-class Main extends React.Component {
+import video from './Assets/bg.m4v';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { solid, regular, brands } from '@fortawesome/fontawesome-svg-core/import.macro';
+import $ from "jquery";
+class Hello extends Component {
+  componentDidMount() {
+    $(".click-span").click(function(){
+      var a = $(this).closest(".inner-road").find(".road-card");
+      var c = $(this).closest(".inner-road").find(".bat");
+      var vid = document.getElementById("myAudio");
+      if($(this).hasClass("active")){
+          $(this).removeClass("active");
+          a.hide();
+          c.removeClass("up");
+          vid.pause();
+        c.fadeIn();
+        console.log("hello 2");
+        return false;
+      } else{
+        console.log("bye 1");
+          $(this).addClass("active");
+          a.show();
+          c.addClass("up");
+          vid.play();
+          setTimeout(function() { 
+            c.fadeOut(); 
+        }, 6000);
+      }
+    })
+      $("body").ready(function(){
+        var b = $(".road-card").hide();
+        
+    
+      })
+      
+   
+  }
   render() {
     return (
+      <div className="App">
+        {/* <h1>jquery in React App</h1>
+        <button>Click Me</button> */}
+      </div>
+    );
+  }
+}
+ReactDOM.render(
   <BrowserRouter basename="/killer-club-house">
+      <div className='bg-video'>
+
+<video loop autoplay="" muted>
+  <source src={video} type="video/mp4" />
+</video>
+</div>
   <div className='overlay'>
+  <div class="icon-bar">
+  <a href="#" class="twitter"> <FontAwesomeIcon icon={brands('twitter')} /></a> 
+  <a href="#" class="discord"><FontAwesomeIcon icon={brands('discord')} /></a> 
+</div>
   <header className='pageheader'>
       <Header />
     </header>
@@ -21,17 +75,16 @@ class Main extends React.Component {
       <Route path="/" element={<App />} />
       <Route path="About" element={<About />} />
     </Routes>
+    <Hello />
     <footer>
       <Footer />
     </footer>
   </div>
   
-  </BrowserRouter>
-  // document.getElementById('root')
+  </BrowserRouter>,
+  document.getElementById('root')
 );
-}
-}
-ReactDOM.render(<Main />, document.getElementById("root"));
+// ReactDOM.render(<Main />, document.getElementById("root"));
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
 // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals

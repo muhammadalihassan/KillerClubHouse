@@ -48,6 +48,60 @@ ul{
   padding: 0;
 }
 /* header css start */
+.is-sticky {
+  position: fixed;
+    top: 0;
+    animation: 500ms ease-in-out 0s normal none 1 running fadeInDown;
+    width: 100%;
+    background-color: #000000db;
+    z-index: 999999999;
+    border-bottom: 4px solid #f7100285;
+
+}
+@keyframes fadeInDown {
+  0% {
+     opacity: 0;
+     transform: translateY(-20px);
+  }
+  100% {
+     opacity: 1;
+     transform: translateY(0);
+  }
+} 
+.is-sticky .logo-main img {
+  width: 50%;
+}
+
+.is-sticky .logo-main {
+  text-align: center;
+}
+.icon-bar {
+  position: fixed;
+    top: 30%;
+    transform: translateY(-50%);
+    z-index: 9999;
+}
+
+.icon-bar a {
+  display: block;
+  text-align: center;
+  padding: 10px;
+  transition: all 0.3s ease;
+  color: white;
+  font-size: 18px;
+  line-height: 0;
+}
+.icon-bar a:hover {
+  background-color: #000;
+}
+.twitter {
+  background: #55ACEE;
+  color: white;
+}
+.discord {
+  background: #8161f3;
+  color: white;
+}
 .bg-video video {
   width: 100%;
   height: 100%;
@@ -81,6 +135,7 @@ ul{
     text-transform: capitalize;
     position: relative;
     padding: 12px 15px;
+    letter-spacing: 3px;
 }
 .pageheader .navbar-nav .nav-link.active:after{
 opacity: 1;
@@ -101,11 +156,13 @@ color: #f60801;
     opacity: 0;
 }
 .pageheader .navbar-collapse {
-  display: block !important;
+  justify-content: center;
 }
 .pageheader .navbar-nav {
   align-items: center;
   justify-content: space-between;
+  width: 100%;
+
 }
 .wht-btn {
   background-color: #fff;
@@ -182,7 +239,7 @@ color: #f60801;
 /* banner css start */
 .banner-main {
   text-align: center;
-  margin: 50px 0 0;
+  margin: 50px 0 150px;
 }
 
 .banner-main h6 {
@@ -206,7 +263,7 @@ color: #f60801;
   margin: 0;
 }
 .banner-main p {
-  width: 54%;
+  width: 80%;
   margin: 0 auto;
   line-height: 40px;
   opacity: 0.8;
@@ -215,7 +272,7 @@ color: #f60801;
   margin-bottom: 33px;
 }
 
-.banner-main a {
+.banner-main > a {
   display: inline-block;
   color: #fff;
   text-decoration: none;
@@ -226,10 +283,10 @@ color: #f60801;
   padding: 10px 10px;
   position: relative;
 }
-.banner-main a:hover {
+.banner-main > a:hover {
   color: #000;
 }
-.banner-main a:before{
+.banner-main > a:before{
   position: absolute;
   content: '';
   background-image: url('Assets/button-r.png');
@@ -240,7 +297,7 @@ color: #f60801;
     left: -99px;
     top: 0;
 }
-.banner-main a:after{
+.banner-main > a:after{
   position: absolute;
   content: '';
   background-image: url('Assets/button-r.png');
@@ -251,6 +308,13 @@ color: #f60801;
     right: -99px;
     top: 0;
     transform: rotate(180deg);
+}
+.banner-main p a {
+  text-decoration: none;
+  color: #f71002;
+  font-size: 21PX;
+  letter-spacing: 1px;
+  margin-left: 10px;
 }
 /* banner css end */
 /* tomb css start */
@@ -406,6 +470,163 @@ text-transform: uppercase;
 }
 /* story css end */
 /* roadmap css start */
+.roadmap-card {
+  position: absolute;
+  top: 26px;
+  right: 113px;
+  width: 60%;
+  
+}
+.click-span {
+  height: 35px;
+  width: 35px;
+  border-radius: 50%;
+  border: 5px solid #ffffff;
+  background: #f71002;
+  top: -20px;
+  position: relative;
+  right: -36%;
+  display: inline-block;
+  color: #fff;
+  animation: shadow-pulse 1s infinite;
+  z-index: 9999999;
+}
+.point-card {
+  background: yellow;
+  width: 45%;
+  position: relative;
+  top: -105px;
+  padding: 20px;
+  display: inline-block;
+
+}
+.roadmap-card h5::before{
+  content: '\f54c';
+  position: absolute;
+  color: #f60801;
+  left: -25px;
+  font-family: 'FontAwesome';
+}
+.inner-road {position: relative;}
+
+.inner-road a {display: inline-block;}
+
+.inner-road .road-card {
+  max-width: 50%;
+  position: absolute;
+  right: 0;
+  top: -145px;
+  background: black;
+  padding: 20px 30px;
+  z-index: 99;
+  border: 2px solid #fe000061;
+}
+.roadmap-card.left-cd {
+  top: 26%;
+  left: -88px;
+}
+.roadmap-card.right-cd {
+  left: 205px;
+  top: 42%;
+}
+.road-card.right-card {
+  top: 60%;
+}
+.roadmap-card.end-cd {
+  top: 90%;
+  left: -7%;
+}
+.road-card.end-card {
+  right: -38%;
+  top: -140%;
+}
+.bat {
+    opacity: 0;
+    transition: all 3s ease-in-out;
+}
+
+.bat.up {
+    opacity: 1;
+    top: -280px;
+}
+.audio-player {
+    display: none;
+}
+.bat.end-bat{
+    right: -254px;
+}
+.bat.left-bat{
+    right: -31px;
+    bottom: -97px;
+}
+
+@-webkit-keyframes shakeX {
+  from,
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    -webkit-transform: translate3d(-10px, 0, 0);
+    transform: translate3d(-10px, 0, 0);
+  }
+
+  20%,
+  40%,
+  60%,
+  80% {
+    -webkit-transform: translate3d(10px, 0, 0);
+    transform: translate3d(10px, 0, 0);
+  }
+}
+@keyframes shakeX {
+  from,
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    -webkit-transform: translate3d(-10px, 0, 0);
+    transform: translate3d(-10px, 0, 0);
+  }
+
+  20%,
+  40%,
+  60%,
+  80% {
+    -webkit-transform: translate3d(10px, 0, 0);
+    transform: translate3d(10px, 0, 0);
+  }
+}
+
+
+
+
+
+
+
+
+.bat {
+  position: absolute;
+  top: -250px;
+  right: 69px;
+  z-index: 0;
+}
+.bat img {
+  /* filter: contrast(0); */
+  border: none;
+  width: 100%;
+}
 .roadmap-txt h3:before{
   content: '';
   position: absolute;
@@ -418,6 +639,332 @@ text-transform: uppercase;
     left: -101px;
     z-index: -1;
     animation: leaves 1s ease-in-out infinite alternate;
+}
+.roadmap-icon {
+  background-color: #f60801;
+  border-radius: 50%;
+  height: 105px;
+  width: 105px;
+  text-align: center;
+  margin: 5px 0;
+}
+.roadmap-icon:nth-child(2){
+  margin: 30px 0;
+}
+.roadmap-icon:nth-child(3) {
+  margin: 265px 0 165px;
+}
+/* .roadmap-card{
+  position: relative;
+} */
+/* .roadmap-card > div {
+  background-color: #f71002;
+  color: #000;
+  padding: 25px 40px 25px 40px;
+  width: 75%;
+  margin: 35px 0;
+
+
+} */
+.roadmap-content{
+  max-height: 115px;
+  overflow: scroll;
+  overflow-x: hidden;
+}
+.click-span{
+  cursor: pointer;
+}
+.bats {
+  /* display: none; */
+  opacity: 0;
+}
+.rd span.bats {
+  top: 0;
+  transition: all 1.5s;
+}
+.rd .bats.up {
+  top: -130px !important;
+  opacity: 1;
+}
+
+/* scroll bar  */
+/* width */
+.road-card::-webkit-scrollbar {
+  width: 7px;
+}
+
+/* Track */
+.road-card::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px #f71002; 
+  border-radius: 10px;
+}
+ 
+/* Handle */
+.road-card::-webkit-scrollbar-thumb {
+  background: #f60801; 
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+.road-card::-webkit-scrollbar-thumb:hover {
+  background: #f60801; 
+}
+/* scroll bar End */
+/* .road-card::before {
+  content: '\f0d9';
+  position: absolute;
+  font-family: fontawesome;
+  left: -20px;
+  font-size: 84px;
+  color: #f71002;
+  top: -6px;
+} */
+.roadmap-card h5{text-transform: capitalize; position: relative;}
+
+.mystyle {
+  display: none !important;
+}
+.video-play {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  text-align: center;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+div#play-btn img {
+  width: 30%;
+}
+.video-play button {
+  background-color: #650907;
+    color: #000;
+    display: inline-block;
+    padding: 7px 16px;
+    text-align: center;
+    border-radius: 35px;
+    text-transform: capitalize;
+    font-size: 21px;
+    border: 1px solid #650907;
+    min-width: 200px;
+    margin: 20px 0;
+}
+.video-player{
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  z-index: 9;
+  top: 0;
+  background-color: #000;
+}
+.video-hider{
+  display: none;
+}
+.more {display: none;}
+.road-img{position: relative;}
+.road-img > img {
+  width: 100%;
+}
+.bats img {
+  filter: contrast(0);
+}
+.roadmap-point-1 span.road-card {
+  top: -25px !important;
+  right: 15% !important;
+  background-color: #f71002 !important;
+  animation: none !important;
+  border: 1px solid #f71002 !important;
+  height: 120px !important;
+  width: 20% !important;
+  border-radius: 0 !important;
+  padding-top: 20px !important;
+  padding-left:50px;
+  padding-bottom:20px;
+}
+.roadmap-point-2 span.road-card {
+  background-color: #f71002 !important;
+  animation: none !important;
+  border: 1px solid #f71002 !important;
+  height: 120px !important;
+  width: 20% !important;
+  border-radius: 0 !important;
+  padding-top: 20px !important;
+  padding-left: 50px;
+  padding-bottom: 20px;
+  left: 22%;
+}
+.roadmap-point-3 span.road-card {
+  background-color: #f71002 !important;
+  animation: none !important;
+  border: 1px solid #f71002 !important;
+  height: 120px !important;
+  width: 20% !important;
+  border-radius: 0 !important;
+  padding-top: 20px !important;
+  padding-left: 50px;
+  padding-bottom: 20px;
+  right: 10%;
+}
+.roadmap-point-4 span.road-card {
+  background-color: #f71002 !important;
+  animation: none !important;
+  border: 1px solid #f71002 !important;
+  height: 120px !important;
+  width: 20% !important;
+  border-radius: 0 !important;
+  padding-top: 20px !important;
+  padding-left: 50px;
+  padding-bottom: 20px;
+  left: 45%;
+}
+span.road-card h5:before {
+  color: #f60801;
+  content: "\f54c";
+  font-family: FontAwesome;
+  left: 15px;
+  position: absolute;
+}
+.roadmap-point-1 span.bats {
+  /* top: -100px; */
+  right: 25%;
+  border: none;
+  background: none;
+  animation: none;
+}
+.roadmap-point-2 span.bats {
+  border: none;
+  background: none;
+  animation: none;
+  left: 30%;
+  top: 22%;
+}
+.roadmap-point-3 span.bats {
+  border: none;
+  background: none;
+  animation: none;
+  right: 27%;
+  top: 37%;
+}
+.roadmap-point-4 span.bats {
+  border: none;
+  background: none;
+  animation: none;
+  right: 30%;
+}
+.roadmap-point-4 span.bats {
+  border: none;
+  background: none;
+  animation: none;
+  left: 45%;
+  top: 55%;
+}
+.road-card{
+  max-height: 115px;
+  overflow: scroll;
+  overflow-x: hidden;
+}
+.road-card h5{
+  color: #fff8f8;
+  text-align: left;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 14px;
+}
+.road{
+  width: 100%;
+  text-align: center;
+  padding-top: 100px;
+  position: relative;
+}
+.roadmap-point-1 span {
+  background-color: #f71002;
+  border: 5px solid #650907;
+  height: 30px;
+  width: 30px;
+  position: absolute;
+  top: 106px;
+  right: 20%;
+  border-radius: 50%;
+  animation: shadow-pulse 1s infinite;
+}
+.roadmap-point-2 span {
+  background-color: #f71002;
+  border: 5px solid #650907;
+  height: 30px;
+  width: 30px;
+  position: absolute;
+  top: 106px;
+  right: 10%;
+  border-radius: 50%;
+  animation: shadow-pulse 1s infinite;
+}
+.roadmap-point-2 span {
+  background-color: #f71002;
+  border: 5px solid #650907;
+  height: 30px;
+  width: 30px;
+  position: absolute;
+  top: 32%;
+  left: 44%;
+  border-radius: 50%;
+  animation: shadow-pulse 1s infinite;
+}
+.roadmap-point-3 span {
+  background-color: #f71002;
+  border: 5px solid #650907;
+  height: 30px;
+  width: 30px;
+  position: absolute;
+  top: 46%;
+  right: 33%;
+  border-radius: 50%;
+  animation: shadow-pulse 1s infinite;
+}
+.roadmap-point-4 span {
+  background-color: #f71002;
+  border: 5px solid #650907;
+  height: 30px;
+  width: 30px;
+  position: absolute;
+  top: 50%;
+  right: 33%;
+  border-radius: 50%;
+  animation: shadow-pulse 1s infinite;
+}
+.roadmap-point-4 span {
+  background-color: #f71002;
+  border: 5px solid #650907;
+  height: 30px;
+  width: 30px;
+  position: absolute;
+  top: 65%;
+  left: 38%;
+  border-radius: 50%;
+  animation: shadow-pulse 1s infinite;
+}
+@keyframes shadow-pulse
+{
+0% {
+  box-shadow: 0 0 0 0px rgba(232, 36, 29, 0.7);
+}
+100% {
+  box-shadow: 0 0 0 35px rgba(0, 0, 0, 0);
+}
+}
+
+@keyframes shadow-pulse-big
+{
+0% {
+  box-shadow: 0 0 0 0px rgba(252, 188, 178, 0.5);
+}
+100% {
+  box-shadow: 0 0 0 70px rgba(0, 0, 0, 0);
+}
+}
+.audio-player {
+  display: none;
 }
 /* roadmap css end */
 /* team css start */
@@ -599,37 +1146,15 @@ transform: scale(1.1);
   min-width: 50px;
   text-align: center;
   margin: 0 3px;
-}
-.footer-btm ul li a:hover{
-opacity: 0.8;
-}
-.twt {
-  color: #60b8ff;
-  background-color: #60b8ff59;
+  color: #fff;
+
 }
 .twt:hover {
-  color: #60b8ff;
+  background-color: #60b8ff59;
 }
-.fb {
-  color: #8fa1e9;
-  background-color: #3e54aa61;
-}
-.fb:hover {
-  color: #8fa1e9;
-}
-.insta {
-  color: #d82f77;
-  background-color: #d82f7742;
-}
-.insta:hover{
-  color: #d82f77;
-}
-.twi {
-  color: #9b80ff;
-  background-color: #5e44bbb5;
-}
+
 .twi:hover{
-  color: #9b80ff;
+  background-color: #5e44bbb5;
 }
 .footer-btm p {
   margin: 0;
@@ -659,15 +1184,356 @@ opacity: 0.8;
 
 /* FOR WIDTH 1199px  */
 @media only screen and (min-width: 992px) and (max-width: 1199px){
- 
+  .bg-video video {
+    height: 100vh;
+    object-fit: cover;
+}
+.wht-btn:before {
+  left: -29px;
+}
+.wht-btn:after {
+  right: -29px;
+}
+.banner-main h1 {
+  font-size: 7rem;
+  line-height: 120px;
+  background-position: 0px -623px;
+}
+.big-txt {
+  font-size: 8rem;
+  line-height: initial;
+}
+.small-txt {
+  font-size: 3rem;
+}
+.abt-headings {
+  margin-top: -60px;
+}
+.about-txt h3:after {
+  width: 120px;
+  height: 120px;
+  top: -30px;
+  right: -30px;
+}
+.about-txt p {
+  font-size: 16px;
+  line-height: 35px;
+  width: 100%;
+}
+.story-txt .row {
+  margin-top: -40px;
+}
+.story-txt p {
+  font-size: 16px;
+  line-height: 35px;
+}
+.story-txt h3 {
+  margin-left: 0;
+  margin: 20px 0;
+}
+.story-txt h3:before {
+  width: 130px;
+  height: 130px;
+  top: -42px;
+  left: -55px;
+}
+.roadmap-txt h3:before {
+  width: 130px;
+  height: 130px;
+  top: -31px;
+  left: -71px;
+}
+.team-txt h3:before{
+  width: 130px;
+  height: 130px;
+  top: -31px;
+  left: -71px;
+}
+.team-img .img-txt p {
+  line-height: 21px;
+  font-size: 14px;
+}
+.team-img .img-txt {
+  padding: 7px;
+}
 }
 
 /* FOR WIDTH 991px  */
 @media only screen and (min-width: 768px) and (max-width: 991px){
- 
+  .bg-video video {
+    height: 100vh;
+    object-fit: cover;
+}
+.mob-view {
+  display: block;
+}
+.logo-main img {
+  width: 65%;
+}
+.des-view {
+  display: none;
+}
+.pageheader .navbar-collapse {
+  background-color: #000000cf;
+    padding-bottom: 20px;
+    border: 2px solid #f7100285;
+    animation: blink 2s linear infinite;
+}
+.main-header .navbar-toggler:focus {
+  box-shadow: 0 0 20px 0rem #f710029c;
+}
+.wht-btn:before {
+  left: -29px;
+}
+.wht-btn:after {
+  right: -29px;
+}
+.banner-main h1 {
+  font-size: 7rem;
+  line-height: 120px;
+  background-position: 49px -422px;
+}
+.big-txt {
+  font-size: 8rem;
+  line-height: initial;
+}
+.small-txt {
+  font-size: 3rem;
+}
+.abt-headings {
+  margin-top: -60px;
+}
+.about-txt h3:after {
+  width: 120px;
+  height: 120px;
+  top: -30px;
+  right: -30px;
+}
+.about-txt p {
+  font-size: 16px;
+  line-height: 35px;
+  width: 100%;
+}
+.story-txt .row {
+  margin-top: 0;
+}
+.story-txt p {
+  font-size: 16px;
+  line-height: 35px;
+}
+.story-txt h3 {
+  margin-left: 0;
+  margin: 20px 0;
+}
+.story-txt h3:before {
+  width: 130px;
+  height: 130px;
+  top: -42px;
+  left: -55px;
+}
+.roadmap-txt h3:before {
+  width: 130px;
+  height: 130px;
+  top: -31px;
+  left: -71px;
+}
+.team-txt h3:before{
+  width: 130px;
+  height: 130px;
+  top: -31px;
+  left: -71px;
+}
+.team-img .img-txt p {
+  line-height: 21px;
+  font-size: 14px;
+}
+.team-img .img-txt {
+  padding: 7px;
+}
 }
 
 @media only screen and (min-width: 300px) and (max-width: 519px){
-  
+  .banner-main h1 {
+    font-size: 3rem;
+    line-height: initial;
+    background-position: -33px -372px;
+
+}
+.banner-main h1 span{
+  display: block;
+}
+.banner-main {
+  margin: 50px 0 50px;
+}
+.banner-main p {
+  width: 100%;
+  line-height: 30px;
+    font-size: 14px;
+}
+.big-txt {
+  font-size: 4rem;
+  line-height: initial;
+}
+.small-txt {
+  font-size: 2rem;
+}
+.abt-headings {
+  margin-top: 0;
+}
+.red-boxes {
+  padding: 39px 15px;
+  margin: 50px 0;
+
+}
+.about-txt h3:after {
+  width: 100px;
+    height: 100px;
+    top: -34px;
+    right: -30px;
+}
+.about-txt p {
+  width: 100%;
+  font-size: 14px;
+    line-height: 36px;
+}
+.story-txt .row {
+  margin-top: 0;
+}
+.story-txt h2 {
+  text-align: center;
+}
+.story-txt h3 {
+  margin-left: 0;
+  margin: 30px 0;
+}
+.story-txt {
+  text-align: center;
+}
+.story-txt h3:before {
+  width: 120px;
+  height: 120px;
+  top: -34px;
+  left: -48px;
+}
+.roadmap-txt h3:before {
+  width: 100px;
+  height: 100px;
+  top: -31px;
+  left: -65px
+}
+.team-txt h3:before {
+  width: 100px;
+    height: 100px;
+    top: -31px;
+    left: -65px
+}
+.team-img .img-txt {
+  padding: 12px;
+}
+.team-img .img-txt p {
+  line-height: 29px;
+  font-size: 14px;
+}
+.faq-txt h3:before {
+  width: 100px;
+  height: 100px;
+  top: -31px;
+  left: -65px
+}
+.faq-sec .accordion-button {
+  align-items: start;
+}
+.faq-txt .accordion-header h6 {
+  padding-right: 10px;
+  font-size: 18px;
+
+}
+.faq-sec .accordion-button span {
+  font-size: 23px;
+}
+.faq-sec .accordion-button::after {
+  padding: 12px 12px 12px;
+}
+.faq-sec .accordion-button:not(.collapsed) h6 {
+  font-size: 20px;
+}
+.accordion-body p {
+  margin: 0 10px 14px;
+  font-size: 14px;
+    line-height: 22px;
+}
+.footer-btm {
+  flex-direction: column;
+}
+.footer-btm ul {
+  margin-top: 20px;
+}
+.banner-main a {
+  font-size: 17px;
+  padding: 10px 4px;
+}
+.banner-main a:before {
+  width: 57px;
+  left: -57px;
+}
+.banner-main a:after {
+  width: 57px;
+  right: -57px;
+}
+.banner-main h6 {
+  font-size: 18px;
+}
+.footer-top .nav a {
+  font-size: 16px;
+}
+.footer-top .nav {
+  margin: 20px 30px 0;
+}
+.footer-btm p {
+  font-size: 14px;
+}
+.mob-view {
+  display: block;
+}
+.logo-main img {
+  width: 65%;
+}
+.des-view {
+  display: none;
+}
+.pageheader .navbar-collapse {
+  background-color: #000000cf;
+    padding-bottom: 20px;
+    border: 2px solid #f7100285;
+    animation: blink 2s linear infinite;
+}
+.main-header .navbar-toggler:focus {
+  box-shadow: 0 0 20px 0rem #f710029c;
+}
+.bg-video video {
+  height: 100vh;
+  object-fit: cover;
+  position: fixed;
+
+}
+.story-txt p {
+  font-size: 14px;
+  line-height: 36px;
+}
+.main-header {
+  margin-bottom: 45px;
+}
+.is-sticky .logo-main img {
+  width: 40%;
+}
+.is-sticky .logo-main{
+  text-align: left;
+}
+.wht-btn:before {
+  left: -29px;
+}
+.wht-btn:after {
+  right: -29px;
+}
 }
  

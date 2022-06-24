@@ -1,12 +1,9 @@
 // SITE LOGO
-import React, { Component, useState } from 'react';
+import React, { Component, useState, useEffect } from 'react';
 import ReactDOM, { render } from 'react-dom';
 import sitelogo from '../Assets/logo-main.png';
-import video from '../Assets/bg.m4v';
 import { Navbar, Nav, Container, NavDropdown, Form, Button, Dropdown, FormControl } from 'react-bootstrap';
-
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { solid, regular, brands } from '@fortawesome/fontawesome-svg-core/import.macro';
+import $ from 'jquery'
 import { Link, NavLink } from "react-router-dom";
 import Section from './Switch.js'
 function Header() {
@@ -17,23 +14,40 @@ function Header() {
     setExpanded(false);
     // window.scrollTo(0, 0);
   }
+  useEffect(() => {
+    window.addEventListener('scroll', isSticky);
+    return () => {
+        window.removeEventListener('scroll', isSticky);
+    };
+});
+
+       
+/* Method that will fix header after a specific scrollable */
+       const isSticky = (e) => {
+            const header = document.querySelector('.header-section');
+            const scrollTop = window.scrollY;
+            scrollTop >= 250 ? header.classList.add('is-sticky') : header.classList.remove('is-sticky');
+        };
+
+
+        const [show, setShow] = useState(false);
+
+        const handleClose = () => setShow(false);
+        const handleShow = () => setShow(true);
+        let [hideVideo, setHideVideo] = useState(0);
+        function playVid() {
+          var vid = document.getElementById("myVideo");
+            vid.play();
+            var element = document.getElementById("play-btn");
+           element.classList.add("mystyle");
+        }
+        
     return (
      
-      <div className='main-header'>
-         <div className='bg-video'>
-
-        <video loop autoplay="" muted>
-          <source src={video} type="video/mp4" />
-        </video>
-      </div>
+      <div className='main-header header-section'>
          <Container>
-          <div className='top-header'>
+          {/* <div className='top-header'>
             <ul>
-              <li>
-                <a href='#'>
-                   <FontAwesomeIcon icon={brands('facebook-f')} />
-                </a>
-              </li>
               <li>
                 <a href='#'>
                    <FontAwesomeIcon icon={brands('twitter')} />
@@ -41,17 +55,12 @@ function Header() {
               </li>
               <li>
                 <a href='#'>
-                   <FontAwesomeIcon icon={brands('instagram')} />
-                </a>
-              </li>
-              <li>
-                <a href='#'>
-                   <FontAwesomeIcon icon={brands('twitch')} />
+                   <FontAwesomeIcon icon={brands('discord')} />
                 </a>
               </li>
             </ul>
-          </div>
-         <Navbar expand="lg" variant="dark">
+          </div> */}
+         <Navbar expand="lg" variant="dark" >
          <Navbar.Brand as={Link} to="/" className='mob-view'>
             <div className='logo-main'>
           <img src={sitelogo} alt='' className='bimg-3'/>
@@ -62,7 +71,7 @@ function Header() {
           <Nav >
           <Nav.Link exact='true' as={Link} to={'/'} >Home</Nav.Link>
                 <Nav.Link exact='true' href={'#story'} >story</Nav.Link>
-                <Nav.Link exact='true' href={'#road'} >road</Nav.Link>
+                <Nav.Link exact='true' href={'#road'} >roadmap</Nav.Link>
                 <Navbar.Brand as={Link} to="/" className='des-view'>
             <div className='logo-main'>
           <img src={sitelogo} alt='' className='bimg-3'/>
