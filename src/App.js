@@ -74,6 +74,95 @@ function App() {
     );
   };
 
+  const ReadMore2 = ({ children }) => {
+    const text = children;
+    const [isReadMore2, setIsReadMore2] = useState(true);
+    const toggleReadMore2 = () => {
+      setIsReadMore2(!isReadMore2);
+    };
+    return (
+      <p className="text">
+        {isReadMore2 ? text.slice(0, 300) : text}
+        <a href='javascript:void(0)' onClick={toggleReadMore2} className="read-or-hide">
+          {isReadMore2 ? "...read more" : " show less"}
+        </a>
+      </p>
+    );
+  };
+    
+  const Content2 = () => {
+    return (
+      
+          <ReadMore2>
+         By day, the Connors toured the land the village
+          folk seemed to fear. Yes, it was indeed rather barren,
+           but the surrounding countryside clearly flourished, 
+           with no evidence of a spreading plant disease or unchecked
+            insect infestation. Not ones to let superstition get the
+             best of them, and capitalizing on the desperation of 
+             the locals, the Connors purchased several farms adjacent
+              to the “blasted heath,” and combined them into an impressive
+               estate.
+               As they had hoped, life proceeded rather peacefully for 
+               the Connors. Mr. Connor took to raising livestock and 
+               continued to apply the butchering trade as the need in 
+               the neighborhood arose. Mrs. Connor was largely occupied 
+               with tending to the needs of the family in the country manor,
+                as well as its surrounding gardens. Their son was a vibrant 
+                dreamer and gravitated to painting them from time-to-time. 
+                Their daughter was an avid reader, and took to crafting her 
+                own fairy tales filled with ancient magic and fantastical 
+                creatures. As hoped, the children thrived in rural life, 
+                especially with their newfound friendships with kids from 
+                nearby farms.   
+                Amid the summer of 1895, something unique came to that quiet,
+                 secluded slice of Americana. The Connors had heard of traveling
+                  circuses and carnivals of course, but nothing of this sort ever 
+                  touring this far out from civilization. The carnival pitched
+                   its giant tents right in the middle of the “blasted heath,” 
+                   still as desolate as when the Connors had first arrived. Despite
+                    the lingering memories of the land now hosting the event,
+                     the draw of the carnival lights and sounds of the attractions
+                      were too much for the locals to resist. Curiously, it was as 
+                      if the population of this rural zone had boomed overnight. 
+                      There were far too many attendees now flocking to this carnival
+                       from every direction. Clearly more than can account for the 
+                       small number of families who occupy this remote region. Wherever
+                        all these people came from, you couldn’t deny how friendly 
+                        they seemed, always inviting and beckoning with big smiles. 
+                        The event was strangely free of charge. It was said to be a 
+                        celebration of some kind, but no one could pin down the details.
+                         There was candy and popcorn and games and wonders alike. It truly
+                          was a sight to behold! The Connors, like all their farming 
+                          friends around them, joined in the party that night.
+                          Never had they seen such wonder! The trinkets and magic! The
+                           tastes and smells! The many creatures and performers! 
+                           People of all shapes and sizes, colors and creeds, were
+                            represented there. Everyone was really into dressing the
+                             part. The carnival was like a melting pot of every festival
+                             , from the height of every empire, selecting only the best 
+                             every corner of the globe had to offer, and bottling it all 
+                             up into one place. What a blessing! What a fine memory for 
+                             our children to cherish! The Connors couldn’t help but think. 
+                             As the Connors were about to return home, along with the rest 
+                             of their pleasantly exhausted neighbors, some of the event masters 
+                             handed out souvenirs. They bid everyone a fond farewell and prioritized
+                              the young children with their generous gifts. To the Connors’ daughter, 
+                              they presented a stuffed teddy bear. One that would usually be quite difficult 
+                              to win. The clown who delivered it, carried a large toothy grin that was quite
+                               locked in place, his face smeared by a long night of makeup and sweat. Slightly
+                                disturbed, but not wanting to appear rude, the Connors graciously accepted 
+                                the token and quickly passed by. With the gift received, the daughter gave it 
+                                a choking hug and promised then and there to love “Teddy,” forever. When the
+                                 Connors finally arrived home, the happiness felt there could heat the whole of it.
+                                  They drifted to sleep soundly that night, thinking that life couldn’t possibly 
+                                  be better than this… 
+
+                                  The Connors, I’m afraid, did not wake up, at least not in the way we typically understand. Their fate was to be an eternal nightmare from which there can be no peace.
+          </ReadMore2>
+        
+    );
+  };
 
 
   return (
@@ -137,16 +226,25 @@ function App() {
                 </Col>
                 <Col md={12} lg={6} xl={6}>
                 <h3 className='small-txt'>your heading here</h3>
-              <p>Lorem Ipsum is simply dummy text of the printing
-                 and typesetting industry. Lorem Ipsum has been the 
-                 industry's standard dummy text ever since the 1500s,
-                  when an unknown printer took a galley of type and scrambled 
-                  it to make a type specimen book. It has survived not only five
-                   centuries, but also the leap into electronic typesetting, 
-                   remaining essentially unchanged. It was popularised in the 
-                   1960s with the release of Letraset sheets.</p>
+              <p>The Connors… Now there is a classically sobering tale.
+                 Theirs was a family of relatively humble stock. Mr. Connor
+                  was a skilled butcher by trade, while his wife was a 
+                  homemaker as was common for married women of the time.
+                   Wishing to raise their two young children in a more 
+                   traditional manner, and after coming into a small inheritance,
+                    the family left the city and headed into the countryside. </p>
+                    <p>The year was 1892. As the Connor family was searching for a plot 
+                      of land to settle, all the locals they talked to seemed anxious to
+                       leave. They frequently would bargain downward to try and secure a
+                        quick deal, as only the Connors had come looking to buy in God knows
+                         how long. In search of their motivations, Mr. Connor gathered a few
+                          rumors referencing a “blasted heath” nearby, and a cloud of madness 
+                          that surrounded the now decade deceased owners. </p>
                 </Col>
               </Row>
+              <div className='remaining-story-cntnt'>
+              <Content2 />
+              </div>
             </div>
           </div>
           <div className='red-boxes' id="road">
