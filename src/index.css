@@ -1439,6 +1439,19 @@ transform: scale(1.1);
 .team-img .img-txt {
   padding: 7px;
 }
+.road-phases .nav-link.active:before {
+  width: 39px; 
+  left: -38px;
+}
+.road-phases .nav-link.active:after {
+  width: 39px;
+  right: -38px;
+}
+.road-phases .nav-link {
+  font-size: 17px;
+  padding: 10px 16px;
+  margin-bottom: 10px;
+}
 }
 
 @media only screen and (min-width: 300px) and (max-width: 519px){
@@ -1635,7 +1648,8 @@ transform: scale(1.1);
 }
 .road-phases .nav-link {
   font-size: 17px;
-  padding: 10px 12px;
+  padding: 10px 16px;
+  margin-bottom: 10px;
 }
 }
  

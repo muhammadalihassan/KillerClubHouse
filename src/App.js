@@ -352,6 +352,9 @@ function App() {
                     <Nav.Item>
                       <Nav.Link eventKey="second">Phase 2</Nav.Link>
                     </Nav.Item>
+                    <Nav.Item>
+                      <Nav.Link eventKey="third">Phase 3</Nav.Link>
+                    </Nav.Item>
                   </Nav>
                 </Col>
                 <Col sm={12}>
@@ -377,6 +380,11 @@ function App() {
                         <li>LAUNCH <b>VR EXPERIENCE</b></li>
                         <li><b>CNFT-CON BOOTH</b></li>
                         <li>SPECIAL <b>HALOWEEN DROP</b></li>
+                      </ul>
+                    </Tab.Pane>
+                    <Tab.Pane eventKey="third">
+                      <ul>
+                        <li><b>Coming Soon</b>. </li>
                       </ul>
                     </Tab.Pane>
                   </Tab.Content>
