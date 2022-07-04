@@ -171,7 +171,7 @@ function App() {
                                      <ul>
                                       <li>Only one thing is for certain.</li>
                                       <li>We are all knocking at Death’s door…</li>
-                                      <li>For his is the only home humanity will reside."</li>
+                                      <li>For his is the only home humanity will reside.</li>
                                      </ul>
           </span>}
           <a href="javascript:void(0)" onClick={() => setShow(prev => !prev)}>
