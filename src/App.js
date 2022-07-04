@@ -40,40 +40,6 @@ function App() {
      element.classList.add("mystyle");
   }
 
-
-  const ReadMore = ({ children }) => {
-    const text = children;
-    const [isReadMore, setIsReadMore] = useState(true);
-    const toggleReadMore = () => {
-      setIsReadMore(!isReadMore);
-    };
-    return (
-      <p className="text">
-        {isReadMore ? text.slice(0, 200) : text}
-        <a href='javascript:void(0)' onClick={toggleReadMore} className="read-or-hide">
-          {isReadMore ? "...read more" : " show less"}
-        </a>
-      </p>
-    );
-  };
-    
-  const Content = () => {
-    return (
-      
-          <ReadMore>
-          Back in the medieval era, somewhere between 1253-1286 there lived three crones,
-           each more powerful than the other. The crones who practiced witchcraft and blood
-            magic had to work together to thrive in the world they lived in.
-            The crones initially were humane who wanted to acquire immortality, to never get old, due to which they tried several ways but none of them worked. The crones had the respective names of Circe, Blair, and Glinda. One day they find themselves in an ancient cave which had inscriptions of evil spells and scriptures of blood magic. The scriptures included multiple spells to cast unnatural scenarios in reality. 
-            These rituals included in resurrecting the dead by dark magic, which involved in utilizing an enchanted and sacred place and using its energy. The second ritual involved in being young forever which included blood magic, where blood of humans was consumed and the insides of the victims were devoured. The third ritual included in using an object as a vessel to travel around.
-            The crones were overjoyed with the scriptures they had found, however, they wished for immortality and eternal youth, so they opted for that. The ritual involved a saga of spells, a virgin girl whose blood was required to complete the ritual and a uterus which had been developing a baby. 
-            The crones stepped out to find all the ingredients to perform the ritual, however, they were only able to gather one virgin and one uterus, so the ritual could only be done for one of the crones, giving them eternal youth. The crones fought each other and it ended up in the most powerful crone to kill the other two, who were Blair and Glinda, meanwhile Circe, the most powerful crone survived and completed the ritual, giving her eternal youth. 
-            Circe lived through centuries, travelling all around the world, however, after spending six centuries where her age was capped unnaturally at 21, she noticed herself getting old, wrinkles and loose skin. She was baffled and angry, so she took out the evil scriptures and found a cure for the condition, where she had to perform the third ritual to use an object which turned out to be a bear as a vessel until she finds herself a virgin girl and a pregnant woman who were related. 
-          </ReadMore>
-        
-    );
-  };
-
   const ReadMore2 = ({ children }) => {
     const text = children;
     const [isReadMore2, setIsReadMore2] = useState(true);
@@ -163,7 +129,58 @@ function App() {
         
     );
   };
-
+  const Search = () => {
+    const [show, setShow] = useState(false);
+    return(
+      <>
+        
+        {show && <span>
+            Conjured in
+               antiquity during that primordial era from heaven knows where. Only half referenced in stone
+                age scrawlings of hermit madmen and whispered amongst the oral histories of congregated outcasts
+                 and heretics. What blasphemous deals were struck to secure our evolution? What sacrifices were made
+                  to separate ourselves from the other primitive primate species and thus nature’s tyrannical 
+                  grasp? Whatever the truth may be, we traded one master for the next. One devil we knew for another
+                   much worse… The only clues of this history now remain in the relics of this hideous, long-lost past.
+                    But they are not telling their secrets, for their essence is more sinister than any expression 
+                    of malevolence that has manifested in our human condition. Why should they speak? These… Vessels…
+                     have us right where they want us…. Distracted, decadent, and divided. Prime livestock in the never-ending
+                      harvest of souls. One day, the grand tapestry will reveal itself, the cup filled to the brim with the wailings
+                       of the damned. Then the eternal night will descend upon us all!
+                       <br /><br />The game the Vessels play is long…. Dramatic calamity will strike during one epoch
+                         of time to then disappear in a relative instant, drawing little scrutiny of connectedness.
+                          The slow surgical soul-sucking satiate these eldritch snakes for a season. But inevitably
+                           they strike again, as is their nature. Their poison savagely spread through the veins of
+                            civilization. Each Vessel has a particular way of savoring the delicacy of a human soul,
+                             prolonging the agonizing tragedy in the wake of its wrath. To better relish in the cruel
+                              irony, they often take the forms of innocent objects normally associated with human 
+                              expressions of love, community, honor, harmony, and happiness. Cloaked in subterfuge,
+                               and emersed in the proximity of pain, they feed….<br /><br />
+                               How could any of us hope to resist? For whom could possibly know to confront the embodiment
+                                 of evil when it is camouflaged in that of a wedding ring? Cursed to bring those who swear vows
+                                  upon it, a spirit of infidelity, deception, and treachery. Bringing family members to turn on 
+                                  one another, inevitably in horrendous violence. Who would have thought that a simple fur pelt,
+                                   used to bring warmth and survival, could twist its subjects into hideous demonic beasts, craving 
+                                   greed-induced murder of their whole tribe? Who would have guessed that an ancient pyramid, housing
+                                    the royal dead, was the voice behind a beckoning call, entrancing disoriented villagers to entomb 
+                                    themselves in its deepest burial chambers? How were we to detect corrupted relics at the monastery 
+                                    that when used in supplication, sow the seeds of discord, conflagration, and rebellion? Who could possibly
+                                     fathom a little child’s plaything, a teddy bear possessed, procured at something as innocuous as a 
+                                     traveling carnival, corrupting those around it into the most terrifying instruments of perpetual despair?<br /><br />
+                                     So many lives were ruined. So many yet to be…<br /><br />
+                                     <ul>
+                                      <li>Only one thing is for certain.</li>
+                                      <li>We are all knocking at Death’s door…</li>
+                                      <li>For his is the only home humanity will reside."</li>
+                                     </ul>
+          </span>}
+          <a href="javascript:void(0)" onClick={() => setShow(prev => !prev)}>
+          {show ? "show less" : "...read more"}
+          </a>
+      </>
+    );
+  }
+  
 
   return (
     
@@ -173,7 +190,12 @@ function App() {
           <div className='banner-main'>
             <h6>welcome to killer </h6>
             <h1 data-aos="fade-down">club<span>house</span></h1>
-            <Content />
+            <p>
+            There are some things that should be left hidden. That should be ignored and forgotten.
+             Left to the sands of time. Buried deep below, to never again bear witness to the celestial skies.
+              Some evils are… older… than we can possibly fathom with our feeble faculties.<Search />
+            </p>
+            
             <Link as={Link} to="/" className='button-r'>explore the club house</Link>
           </div>
           {/* <div className='tomb-sec'>
@@ -225,7 +247,7 @@ function App() {
                 <img src={story} />
                 </Col>
                 <Col md={12} lg={6} xl={6}>
-                <h3 className='small-txt'>your heading here</h3>
+                <h3 className='small-txt'>Origin Story</h3>
               <p>The Connors… Now there is a classically sobering tale.
                  Theirs was a family of relatively humble stock. Mr. Connor
                   was a skilled butcher by trade, while his wife was a 
