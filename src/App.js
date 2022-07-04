@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState, Component} from 'react';
 import story from './Assets/story.jpg';
 import t1 from './Assets/t1.jpg';
 import t2 from './Assets/t2.jpg';
@@ -9,6 +9,7 @@ import t6 from './Assets/t6.jpg';
 import roadmap_img from './Assets/roadmap-img1.png' 
 import bats_img from './Assets/Bats-img.gif'  
 import bat_voice from './Assets/bat-voice.mp3'  
+import lore from './Assets/lore.mp3'
 import tomb1 from './Assets/tomb1.png';
 import tomb2 from './Assets/tomb2.png';
 import tomb3 from './Assets/tomb3.png';
@@ -19,7 +20,6 @@ import { Container, Row, Col, Accordion } from 'react-bootstrap';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
-
 AOS.init({
       offset: 200,
       duration: 1000,
@@ -28,6 +28,70 @@ AOS.init({
 });
 
 function App() {
+
+  class AudioButton extends Component {
+    constructor(props) {
+      super(props);
+      this.state = {
+        playing: false
+      };
+    }
+  
+    onPlay = (event) => {
+      this.setState({ playing: true });
+    };
+    onPause = (event) => {
+      this.setState({ playing: false });
+    };
+    onEnded = (event) => {
+      this.setState({ playing: false });
+    };
+  
+    playAudio = () => {
+      this.audioEl.play();
+      const audio = this.audioEl;
+      audio.addEventListener("play", this.onPlay);
+      audio.addEventListener("pause", this.onPause);
+    };
+  
+    pauseAudio = () => {
+      this.audioEl.pause();
+    };
+  
+    startAudio = () => {
+      this.playAudio();
+    };
+  
+    renderAudio = () => {
+      const { url } = this.props;
+      const { playing } = this.state;
+      const notSupportedMsg =
+        "Your browser does not support the <code>audio</code> element.";
+      return (
+        <>
+          {!playing && (
+            <i onClick={this.startAudio}>...read more</i>
+          )}
+          {playing && <i onClick={this.pauseAudio}>show less</i>}
+  
+          <audio
+            src={lore}
+            ref={(ref) => {
+              this.audioEl = ref;
+            }}
+          >
+            {notSupportedMsg}
+          </audio>
+        </>
+      );
+    };
+  
+    render() {
+      return this.renderAudio();
+    }
+  }
+
+
   const [show, setShow] = useState(false);
 
   const handleClose = () => setShow(false);
@@ -174,21 +238,25 @@ function App() {
                                       <li>For his is the only home humanity will reside.</li>
                                      </ul>
           </span>}
-          <a href="javascript:void(0)" onClick={() => setShow(prev => !prev)}>
-          {show ? "show less" : "...read more"}
-          </a>
+          <a href="javascript:void(0)" onClick={() => setShow(prev => !prev)}><AudioButton src={lore} >
+         </AudioButton>  </a>
+          
       </>
     );
   }
   
+ 
 
   return (
     
     <section className='main'>
       <div className='index-main'>
-        <Container>
-          <div className='banner-main'>
+        <Container >
+          <div className='banner-main' id="home">
             <h6>welcome to killer </h6>
+            <div className="main">
+      
+    </div>
             <h1 data-aos="fade-down">club<span>house</span></h1>
             <p>
             There are some things that should be left hidden. That should be ignored and forgotten.

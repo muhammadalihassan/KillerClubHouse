@@ -24,11 +24,12 @@ function Footer() {
       <div className="footer-top">
         <img src={sitelogo} />
         <Nav >
-          <Nav.Link exact='true' as={Link} to={'/'} >Home</Nav.Link>
+          <Nav.Link exact='true' href={'#home'}>Home</Nav.Link>
                 <Nav.Link exact='true' href={'#story'} >story</Nav.Link>
-                <Nav.Link exact='true' href={'#road'} >road</Nav.Link>
-                <Nav.Link exact='true' href={'#faq'} >FAQ's</Nav.Link>
+                <Nav.Link exact='true' href={'#road'} >roadmap</Nav.Link>
                 <Nav.Link exact='true' href={'#team'} >team</Nav.Link>
+                <Nav.Link exact='true' href={'#faq'} >FAQ's</Nav.Link>
+                {/* as={Link} to={'/'} */}
           </Nav>
       </div>
       <div className='footer-btm'>
