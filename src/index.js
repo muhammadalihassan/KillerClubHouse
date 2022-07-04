@@ -13,48 +13,48 @@ import video from './Assets/bg.m4v';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { solid, regular, brands } from '@fortawesome/fontawesome-svg-core/import.macro';
 import $ from "jquery";
-class Hello extends Component {
-  componentDidMount() {
-    $(".click-span").click(function(){
-      var a = $(this).closest(".inner-road").find(".road-card");
-      var c = $(this).closest(".inner-road").find(".bat");
-      var vid = document.getElementById("myAudio");
-      if($(this).hasClass("active")){
-          $(this).removeClass("active");
-          a.hide();
-          c.removeClass("up");
-          vid.pause();
-        c.fadeIn();
-        console.log("hello 2");
-        return false;
-      } else{
-        console.log("bye 1");
-          $(this).addClass("active");
-          a.show();
-          c.addClass("up");
-          vid.play();
-          setTimeout(function() { 
-            c.fadeOut(); 
-        }, 6000);
-      }
-    })
-      $("body").ready(function(){
-        var b = $(".road-card").hide();
+// class Hello extends Component {
+//   componentDidMount() {
+//     $(".click-span").click(function(){
+//       var a = $(this).closest(".inner-road").find(".road-card");
+//       var c = $(this).closest(".inner-road").find(".bat");
+//       var vid = document.getElementById("myAudio");
+//       if($(this).hasClass("active")){
+//           $(this).removeClass("active");
+//           a.hide();
+//           c.removeClass("up");
+//           vid.pause();
+//         c.fadeIn();
+//         console.log("hello 2");
+//         return false;
+//       } else{
+//         console.log("bye 1");
+//           $(this).addClass("active");
+//           a.show();
+//           c.addClass("up");
+//           vid.play();
+//           setTimeout(function() { 
+//             c.fadeOut(); 
+//         }, 6000);
+//       }
+//     })
+//       $("body").ready(function(){
+//         var b = $(".road-card").hide();
         
     
-      })
+//       })
       
    
-  }
-  render() {
-    return (
-      <div className="App">
-        {/* <h1>jquery in React App</h1>
-        <button>Click Me</button> */}
-      </div>
-    );
-  }
-}
+//   }
+//   render() {
+//     return (
+//       <div className="App">
+//         {/* <h1>jquery in React App</h1>
+//         <button>Click Me</button> */}
+//       </div>
+//     );
+//   }
+// }
 ReactDOM.render(
   <BrowserRouter basename="/killer-club-house">
       <div className='bg-video'>
@@ -75,7 +75,7 @@ ReactDOM.render(
       <Route path="/" element={<App />} />
       <Route path="About" element={<About />} />
     </Routes>
-    <Hello />
+    {/* <Hello /> */}
     <footer>
       <Footer />
     </footer>

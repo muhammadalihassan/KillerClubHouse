@@ -5,17 +5,14 @@ import t2 from './Assets/t2.jpg';
 import t3 from './Assets/t3.jpg';
 import t4 from './Assets/t4.jpg';
 import t5 from './Assets/t5.jpg';
-import t6 from './Assets/t6.jpg';
-import roadmap_img from './Assets/roadmap-img1.png' 
-import bats_img from './Assets/Bats-img.gif'  
-import bat_voice from './Assets/bat-voice.mp3'  
+import t6 from './Assets/t6.jpg'; 
 import lore from './Assets/lore.mp3'
 import tomb1 from './Assets/tomb1.png';
 import tomb2 from './Assets/tomb2.png';
 import tomb3 from './Assets/tomb3.png';
 import tomb4 from './Assets/tomb4.png';
 import { Link } from 'react-router-dom';
-import { Container, Row, Col, Accordion } from 'react-bootstrap';
+import { Container, Row, Col, Accordion, Tab, Nav } from 'react-bootstrap';
 // AOS
 import AOS from 'aos';
 import 'aos/dist/aos.css';
@@ -344,82 +341,49 @@ function App() {
               <h3 className='small-txt'>the killer journey</h3>
               </div>
             </div>
-            <div className="road">
-    <div className="road-img">
-   <img src={roadmap_img} alt="img" />
-   <div className="roadmap-card">
-    <div className='inner-road'>
-    <a href='javascript:void(0)' className='click-span'>1</a>
-    <div className='road-card'>
-    <div className="card-head">
-    <h3>Phase 1</h3>
-       <h5>Project Planning And Research</h5>
-       <h5>Rendering Getting Final Stages Ready For Launch</h5>
-       </div>
-    </div>
-    <div className="bat"> <img src={bats_img} alt="img" />
-   <div className={"video-player"+' '+"audio-player"+(hideVideo==1?' video-hider':'')}>
-      <audio onEnded={() => setHideVideo(1)} width="100%" id='myAudio'>
-        <source src={bat_voice} type="video/mp3" />
-        <source src={bat_voice} type="video/ogg" />
-      </audio>
-    </div>
-     </div>
-    </div>
-   </div>
-   <div className="roadmap-card left-cd">
-    <div className='inner-road'>
-    <a href='javascript:void(0)' className='click-span'>2</a>
-    <div className='road-card'>
-    <div className="card-head">
-    <h3>Phase 2</h3>
-    <h5>Start Game Production</h5>
-       <h5>Website Released</h5>
-       <h5>Build community</h5>
-       <h5>Living Room Released 2222 Nfts</h5>
-       <h5>1 Of 1 Super Legendary Gif Nft Giveaway</h5>
-       <h5>Secure Metaverse Partnership</h5>
-       <h5>Early Active Community Members Can Secure Perks And Guarantee A Clubhouse Nft</h5>
-       <h5>Fun Competitions And Giveaways</h5>
-       <h5>Ada Giveaways</h5>
-       <h5>2nd Clubhouse Drop 2222 Nfts</h5>
-       </div>
-    </div>
-    <div className="bat"> <img src={bats_img} alt="img" /></div>
-    </div>
-   </div>
-   <div className="roadmap-card right-cd">
-    <div className='inner-road'>
-    <a href='javascript:void(0)' className='click-span'>3</a>
-    <div className='road-card right-card'>
-    <div className="card-head">
-    <h3>Phase 3</h3>
-    <h5>3rd Clubhouse Released 2222 Nfts</h5>
-       <h5>Stake Pool With Metaverse And Gaming Projects Bring Utility To Holders And The Ecosystem</h5>
-       <h5>“Token” Release For Game In Qtr 4</h5>
-       <h5>Promos/Previews For The Game</h5>
-       <h5>4th Clubhouse Release 2222 Nfts</h5>
-       <h5>Preparation For Cnft Con</h5>
-       </div>
-    </div>
-    <div className="bat left-bat"> <img src={bats_img} alt="img" /></div>
-    </div>
-   </div>
-   <div className="roadmap-card end-cd">
-    <div className='inner-road'>
-    <a href='javascript:void(0)' className='click-span'>4</a>
-    <div className='road-card end-card'>
-    <div className="card-head">
-    <h3>Phase 4</h3>
-    <h5>Final Room Drop Of Series 2222 Nfts Game Launch</h5>
-    </div>
-    </div>
-    <div className="bat end-bat"> <img src={bats_img} alt="img" /></div>
-    </div>
-   </div>
-   </div>
-   </div>
-   
+            <div className='road-phases'>
+            <Tab.Container id="left-tabs-example" defaultActiveKey="first">
+              <Row>
+                <Col sm={12}>
+                  <Nav>
+                    <Nav.Item>
+                      <Nav.Link eventKey="first">Phase 1</Nav.Link>
+                    </Nav.Item>
+                    <Nav.Item>
+                      <Nav.Link eventKey="second">Phase 2</Nav.Link>
+                    </Nav.Item>
+                  </Nav>
+                </Col>
+                <Col sm={12}>
+                  <Tab.Content>
+                    <Tab.Pane eventKey="first">
+                      <ul>
+                        <li>The Killer Clubhouse contains <b>5555</b> unique gut-wrenching NFTs. </li>
+                        <li>Launch our Socials: <b>Website, Discord</b> and <b>Twitter</b>.</li>
+                        <li>Revealing the spine-tingling, bloodcurdling <b>LORE</b>. </li>
+                        <li>Releasing The Killer Clubhouse <b>Story</b> and <b>Comic</b>. </li>
+                        <li>Reaching <b>5555</b> Twitter followers and <b>5555</b> Discord members. </li>
+                        <li><b>AMA</b> Session with our highly-enthusiastic and ambitious founder(s) </li>
+                        <li><b>POLICY ID</b> & <b>MARKETPLACE</b> & VR <b>TRAILER</b>.</li>
+                        <li>Launching The Killer Clubhouse <b>Collection</b>.</li>
+                      </ul>
+                    </Tab.Pane>
+                    <Tab.Pane eventKey="second">
+                      <ul>
+                        <li>Listing the Killer Clubhouse on the <b>MARKETPLACE</b>. </li>
+                        <li>RELEASE <b>STAKING</b> & <b>TOKENOMICS</b></li>
+                        <li>HOLDERS <b>AIR DROP</b></li>
+                        <li>BEGIN DEVELOPMENT OF <b>VR ROOMS</b></li>
+                        <li>LAUNCH <b>VR EXPERIENCE</b></li>
+                        <li><b>CNFT-CON BOOTH</b></li>
+                        <li>SPECIAL <b>HALOWEEN DROP</b></li>
+                      </ul>
+                    </Tab.Pane>
+                  </Tab.Content>
+                </Col>
+              </Row>
+            </Tab.Container>
+            </div>
           </div>
           <div className='red-boxes' id="team">
             <div className='team-txt'>

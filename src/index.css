@@ -497,6 +497,68 @@ text-transform: uppercase;
 }
 /* story css end */
 /* roadmap css start */
+.road-phases .nav-link{
+  display: inline-block;
+  color: #fff;
+  text-decoration: none;
+  text-transform: capitalize;
+  font-size: 27px;
+  letter-spacing: 5px;
+  padding: 10px 10px;
+  position: relative;
+  cursor: pointer;
+}
+.road-phases .nav-link.active {
+  
+  background-color: #f71002;
+  
+}
+.road-phases .nav {
+  justify-content: space-evenly;
+}
+.road-phases .tab-pane ul li b {
+  font-weight: 600;
+}
+.road-phases .tab-pane ul li {
+  font-family: 'Open Sans';
+  opacity: 0.8;
+  margin-bottom: 15px;
+  display: inline-block;
+  font-weight: 300;
+}
+.road-phases .tab-pane ul{
+  display: flex;
+  flex-direction: column;
+}
+.road-phases {
+  padding-top: 50px;
+}
+.road-phases .tab-content {
+  margin-top: 60px;
+}
+.road-phases .nav-link.active:after{
+  position: absolute;
+  content: '';
+  background-image: url('Assets/button-r.png');
+  width: 100px;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    right: -99px;
+    top: 0;
+    transform: rotate(180deg);
+}
+.road-phases .nav-link.active:before{
+  position: absolute;
+  content: '';
+  background-image: url('Assets/button-r.png');
+  width: 100px;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    left: -99px;
+    top: 0;
+}
 .roadmap-card {
   position: absolute;
   top: 26px;
@@ -1383,7 +1445,8 @@ transform: scale(1.1);
   .banner-main h1 {
     font-size: 3rem;
     line-height: initial;
-    background-position: -33px -372px;
+    margin-left: 30px;
+    background-position: 31px -341px;
 
 }
 .banner-main h1 span{
@@ -1495,15 +1558,15 @@ transform: scale(1.1);
 .footer-btm ul {
   margin-top: 20px;
 }
-.banner-main a {
+.banner-main > .button-r {
   font-size: 17px;
   padding: 10px 4px;
 }
-.banner-main a:before {
+.banner-main > .button-r:before {
   width: 57px;
   left: -57px;
 }
-.banner-main a:after {
+.banner-main > .button-r:after {
   width: 57px;
   right: -57px;
 }
@@ -1561,6 +1624,18 @@ transform: scale(1.1);
 }
 .wht-btn:after {
   right: -29px;
+}
+.road-phases .nav-link.active:before {
+  width: 39px; 
+  left: -38px;
+}
+.road-phases .nav-link.active:after {
+  width: 39px;
+  right: -38px;
+}
+.road-phases .nav-link {
+  font-size: 17px;
+  padding: 10px 12px;
 }
 }
  
