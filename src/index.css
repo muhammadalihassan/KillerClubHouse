@@ -442,14 +442,14 @@ text-transform: uppercase;
 /* about css end */
 /* story css start */
 .story-txt h2 {
-  text-align: left;
+  text-align: center;
 }
 .story-txt img {
   width: 100%;
 }
 .story-txt .row {
   align-items: center;
-  margin-top: -100px;
+  /* margin-top: -100px; */
 }
 .story-txt p {
   color: #fff;
@@ -475,8 +475,11 @@ text-transform: uppercase;
 .banner-main p span {
   display: inline;
 }
-.story-txt h3{
+/* .story-txt h3{
   margin-left: -82px;
+} */
+.story-txt .abt-headings {
+  text-align: center;
 }
 .story-txt h3:before{
   content: '';
