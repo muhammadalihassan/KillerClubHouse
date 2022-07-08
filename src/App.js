@@ -6,7 +6,7 @@ import t22 from './Assets/sally2.jpeg';
 import t23 from './Assets/sally3.jpeg';
 import t3 from './Assets/flawwed.jpeg';
 import t4 from './Assets/chadder.jpeg';
-import t5 from './Assets/ap.jpeg';
+import t5 from './Assets/ap.jpg';
 import t6 from './Assets/anibus.jpeg'; 
 import t7 from './Assets/farsight.jpeg'; 
 import lore from './Assets/lore.mp3'

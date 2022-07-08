@@ -56,7 +56,7 @@ import $ from "jquery";
 //   }
 // }
 ReactDOM.render(
-  <BrowserRouter basename="/killer-club-house">
+  <BrowserRouter basename="/">
       <div className='bg-video'>
 
 <video loop autoplay="" muted>
