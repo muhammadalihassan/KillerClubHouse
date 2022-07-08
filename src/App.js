@@ -1,11 +1,14 @@
 import React, {useState, Component} from 'react';
 import story from './Assets/story.jpg';
-import t1 from './Assets/t1.jpg';
-import t2 from './Assets/t2.jpg';
-import t3 from './Assets/t3.jpg';
-import t4 from './Assets/t4.jpg';
-import t5 from './Assets/t5.jpg';
-import t6 from './Assets/t6.jpg'; 
+import t1 from './Assets/john.jpeg';
+import t21 from './Assets/sally1.jpeg';
+import t22 from './Assets/sally2.jpeg';
+import t23 from './Assets/sally3.jpeg';
+import t3 from './Assets/flawwed.jpeg';
+import t4 from './Assets/chadder.jpeg';
+import t5 from './Assets/ap.jpeg';
+import t6 from './Assets/anibus.jpeg'; 
+import t7 from './Assets/farsight.jpeg'; 
 import lore from './Assets/lore.mp3'
 import tomb1 from './Assets/tomb1.png';
 import tomb2 from './Assets/tomb2.png';
@@ -14,9 +17,14 @@ import tomb4 from './Assets/tomb4.png';
 import { Link } from 'react-router-dom';
 import { Container, Row, Col, Accordion, Tab, Nav } from 'react-bootstrap';
 // AOS
+// import ScrollUpButton from "react-scroll-up-button"; //Add this line Here
+ 
+
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-
+import "slick-carousel/slick/slick.css"; 
+import "slick-carousel/slick/slick-theme.css";
+import Slider from "react-slick";
 AOS.init({
       offset: 200,
       duration: 1000,
@@ -25,6 +33,44 @@ AOS.init({
 });
 
 function App() {
+
+//   const goToBtm = () => {
+//     window.scrollTo({
+//         bottom: 0,
+//         behavior: "smooth",
+//     });
+// };
+
+  const settings = {
+    dots: false,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: true,
+      speed: 2000,
+      autoplaySpeed: 2000,
+      arrows: false
+  };
+
+  const [buttonText, setButtonText] = useState('Click to Read');
+
+  // function handleClick() {
+  //   if(buttonText.current.classList.contains('collapsed')){
+  //     setButtonText('New text');
+  //   }
+  //   else{
+  //     setButtonText('sfsdsd');
+  //   }
+  // }
+  const handleClick = event => {
+    if (event.currentTarget.classList.contains('collapsed')) {
+     
+      setButtonText('Show Less');
+    } else {
+      setButtonText('Click to Read');
+    }
+  };
 
   class AudioButton extends Component {
     constructor(props) {
@@ -196,7 +242,7 @@ function App() {
       <>
         
         {show && <span>
-            Conjured in
+             Conjured in
                antiquity during that primordial era from heaven knows where. Only half referenced in stone
                 age scrawlings of hermit madmen and whispered amongst the oral histories of congregated outcasts
                  and heretics. What blasphemous deals were struck to secure our evolution? What sacrifices were made
@@ -248,20 +294,21 @@ function App() {
     
     <section className='main'>
       <div className='index-main'>
+      {/* <ScrollUpButton /> */}
         <Container >
           <div className='banner-main' id="home">
             <h6>welcome to killer </h6>
             <div className="main">
       
     </div>
-            <h1 data-aos="fade-down">club<span>house</span></h1>
+            <h1 data-aos="fade-down">club House</h1>
             <p>
             There are some things that should be left hidden. That should be ignored and forgotten.
              Left to the sands of time. Buried deep below, to never again bear witness to the celestial skies.
-              Some evils are… older… than we can possibly fathom with our feeble faculties.<Search />
+              Some evils are… older… than we can possibly fathom with our feeble faculties. <Search />
             </p>
             
-            <Link as={Link} to="/" className='button-r'>explore the club house</Link>
+            <a href='#road' className='button-r'>explore the club House</a>
           </div>
           {/* <div className='tomb-sec'>
             <Row>
@@ -292,11 +339,11 @@ function App() {
               </Col>
             </Row>
           </div> */}
-          <div className='red-boxes'>
+          <div className='red-boxes abt-main'>
             <div className='about-txt'>
               <h2 className='big-txt' >about us</h2>
               <div className='abt-headings'>
-              <h3 className='small-txt'>killer club house about</h3>
+              <h3 className='small-txt'>killer club House about</h3>
               <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
                  standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make
                   a type specimen book. It has survived not only five centuries, but also the leap into electronic.</p>
@@ -310,7 +357,11 @@ function App() {
             <div className='abt-headings'>
             <h3 className='small-txt'>Origin Story</h3>
             </div>
-              <Row>
+            <Accordion className='story-accord'>
+              <Accordion.Item eventKey="0">
+                <Accordion.Header onClick={handleClick}>{buttonText}</Accordion.Header>
+                <Accordion.Body>
+               <Row>
                 <Col md={12} lg={6} xl={6}>
                 <img src={story} />
                 </Col>
@@ -399,6 +450,10 @@ function App() {
                                   be better than this… </p>
                <p>The Connors, I’m afraid, did not wake up, at least not in the way we typically understand. Their fate was to be an eternal nightmare from which there can be no peace.</p>
               </div>
+    </Accordion.Body>
+  </Accordion.Item>
+</Accordion>
+              
             </div>
           </div>
           <div className='red-boxes' id="road">
@@ -428,25 +483,25 @@ function App() {
                   <Tab.Content>
                     <Tab.Pane eventKey="first">
                       <ul>
-                        <li>The Killer Clubhouse contains <b>5555</b> unique gut-wrenching NFTs. </li>
+                        <li>The Killer Club House contains <b>5555</b> unique gut-wrenching NFTs. </li>
                         <li>Launch our Socials: <b>Website, Discord</b> and <b>Twitter</b>.</li>
                         <li>Revealing the spine-tingling, bloodcurdling <b>LORE</b>. </li>
-                        <li>Releasing The Killer Clubhouse <b>Story</b> and <b>Comic</b>. </li>
+                        <li>Releasing The Killer Club House <b>Story</b> and <b>Comic</b>. </li>
                         <li>Reaching <b>5555</b> Twitter followers and <b>5555</b> Discord members. </li>
-                        <li><b>AMA</b> Session with our highly-enthusiastic and ambitious founder(s) </li>
-                        <li><b>POLICY ID</b> & <b>MARKETPLACE</b> & VR <b>TRAILER</b>.</li>
-                        <li>Launching The Killer Clubhouse <b>Collection</b>.</li>
+                        <li><b>AMA</b> Session with our highly-enthusiastic and ambitious founders. </li>
+                        <li><b>POLICY ID</b> & <b>MARKET PLACE</b> & <b>VR TRAILER</b>.</li>
+                        <li>Launching The Killer Club House <b>Collection</b>.</li>
                       </ul>
                     </Tab.Pane>
                     <Tab.Pane eventKey="second">
                       <ul>
-                        <li>Listing the Killer Clubhouse on the <b>MARKETPLACE</b>. </li>
-                        <li>RELEASE <b>STAKING</b> & <b>TOKENOMICS</b></li>
-                        <li>HOLDERS <b>AIR DROP</b></li>
-                        <li>BEGIN DEVELOPMENT OF <b>VR ROOMS</b></li>
-                        <li>LAUNCH <b>VR EXPERIENCE</b></li>
-                        <li><b>CNFT-CON BOOTH</b></li>
-                        <li>SPECIAL <b>HALOWEEN DROP</b></li>
+                        <li>Listing the Killer Club House on the <b>MARKET PLACE</b>. </li>
+                        <li>RELEASE <b>STAKING</b> & <b>TOKENOMICS</b>.</li>
+                        <li>HOLDERS <b>AIR DROP</b>.</li>
+                        <li>BEGIN DEVELOPMENT OF <b>VR ROOMS</b>.</li>
+                        <li>LAUNCH <b>VR EXPERIENCE</b>.</li>
+                        <li><b>CNFT-CON BOOTH</b>.</li>
+                        <li>SPECIAL <b>HALLOWEEN DROP</b>.</li>
                       </ul>
                     </Tab.Pane>
                     <Tab.Pane eventKey="third">
@@ -464,42 +519,62 @@ function App() {
             <div className='team-txt'>
               <h2 className='big-txt' >team</h2>
               <div className='abt-headings'>
-              <h3 className='small-txt'>killer club house team</h3>
+              <h3 className='small-txt'>killer club House team</h3>
+              </div>
+              <div className='team-sub-h'>
+                <h4>FOUNDERS</h4>
               </div>
               <Row>
                 <Col md={6} lg={4} xl={4}>
                   <div className='team-img'>
                     <img src={t1} />
                     <div className='img-txt'>
-                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
-                        incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud 
-                        exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure 
-                        dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
-                        Excepteur sint.</p>
+                      <h6>John A</h6>
+                      <ul>
+                        <li>
+                          <p><b>Twitter:</b> @Johnand94830005</p>
+                        </li>
+                        <li>
+                          <p><b>Discord:</b> Johna#8990</p>
+                        </li>
+                      </ul>
                     </div>
                   </div>
                 </Col>
                 <Col md={6} lg={4} xl={4}>
                   <div className='team-img'>
-                    <img src={t2} />
+                    <img src={t21} />
                     <div className='img-txt'>
-                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
-                        incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud 
-                        exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure 
-                        dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
-                        Excepteur sint.</p>
+                    <h6>Kryptock</h6>
+                      <ul>
+                        <li>
+                          <p><b>Twitter:</b> @Rcole89</p>
+                        </li>
+                        <li>
+                          <p><b>Discord:</b> Kryptock#0413</p>
+                        </li>
+                      </ul>
                     </div>
                   </div>
                 </Col>
+                </Row>
+                <div className='team-sub-h'>
+                <h4>TEAM</h4>
+              </div>
+                <Row>
                 <Col md={6} lg={4} xl={4}>
                   <div className='team-img'>
                     <img src={t3} />
                     <div className='img-txt'>
-                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
-                        incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud 
-                        exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure 
-                        dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
-                        Excepteur sint.</p>
+                    <h6>Flawwed</h6>
+                      <ul>
+                        <li>
+                          <p><b>Main Host / HR / Project Consultant / Marketing Strategist</b></p>
+                        </li>
+                        <li>
+                          <p><b>Twitter:</b> @Flawwed1Art</p>
+                        </li>
+                      </ul>
                     </div>
                   </div>
                 </Col>
@@ -507,11 +582,18 @@ function App() {
                   <div className='team-img'>
                     <img src={t4} />
                     <div className='img-txt'>
-                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
-                        incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud 
-                        exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure 
-                        dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
-                        Excepteur sint.</p>
+                    <h6>Ch₳dervox</h6>
+                      <ul>
+                        <li>
+                          <p><b>Influencer / Co-Host</b></p>
+                        </li>
+                        <li>
+                          <p><b>Twitter:</b> @ChadderVOX</p>
+                        </li>
+                        <li>
+                          <p><b>Discord:</b> @CH₳DDERVOX#8627</p>
+                        </li>
+                      </ul>
                     </div>
                   </div>
                 </Col>
@@ -519,11 +601,37 @@ function App() {
                   <div className='team-img'>
                     <img src={t5} />
                     <div className='img-txt'>
-                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
-                        incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud 
-                        exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure 
-                        dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
-                        Excepteur sint.</p>
+                    <h6>AP</h6>
+                      <ul>
+                        <li>
+                          <p><b>Quality Control</b></p>
+                        </li>
+                        <li>
+                          <p><b>Twitter:</b> @ap_cnft</p>
+                        </li>
+                        <li>
+                          <p><b>Discord:</b> AP#2655</p>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </Col>
+                <Col md={6} lg={4} xl={4}>
+                  <div className='team-img'>
+                    <img src={t21} />
+                    <div className='img-txt'>
+                    <h6>Sallywarrior </h6>
+                      <ul>
+                        <li>
+                          <p><b>Designer / Lead MOD / Lead Shill Army</b></p>
+                        </li>
+                        <li>
+                          <p><b>Twitter:</b> @SarahCole89</p>
+                        </li>
+                        <li>
+                          <p><b>Discord:</b> @Sallywarrior#4400</p>
+                        </li>
+                      </ul>
                     </div>
                   </div>
                 </Col>
@@ -531,11 +639,37 @@ function App() {
                   <div className='team-img'>
                     <img src={t6} />
                     <div className='img-txt'>
-                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
-                        incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud 
-                        exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure 
-                        dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
-                        Excepteur sint.</p>
+                    <h6>AnubisJ  </h6>
+                      <ul>
+                        <li>
+                          <p><b>Lead Developer / Artist</b></p>
+                        </li>
+                        <li>
+                          <p><b>Twitter:</b> @AnubisJ</p>
+                        </li>
+                        <li>
+                          <p><b>Discord:</b> AnubisJ#6282</p>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </Col>
+                <Col md={6} lg={4} xl={4}>
+                  <div className='team-img'>
+                    <img src={t7} />
+                    <div className='img-txt'>
+                    <h6>Farsightx</h6>
+                      <ul>
+                        <li>
+                          <p><b>Graphic Designer / Marketing Consultant / Discord Manager</b></p>
+                        </li>
+                        <li>
+                          <p><b>Twitter:</b> @FarsightxNFT</p>
+                        </li>
+                        <li>
+                          <p><b>Discord:</b> @farsightx#8352</p>
+                        </li>
+                      </ul>
                     </div>
                   </div>
                 </Col>
@@ -550,46 +684,39 @@ function App() {
               </div>
               <Accordion>
   <Accordion.Item eventKey="0">
-    <Accordion.Header><span>Q1</span><h6>It is a long established fact that a reader will be distracted ?</h6></Accordion.Header>
+    <Accordion.Header><span>Q1</span><h6>What is Killer Club House? </h6></Accordion.Header>
     <Accordion.Body>
-      <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised wordswhich don't look even slightly believable..</p>
-   <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary..</p>
-   <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat..</p>
-   <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text..</p>
+      <p>Killer Club House is a CNFT experience unlike any other that was created by horror fans for horror fans.</p>
     </Accordion.Body>
   </Accordion.Item>
   <Accordion.Item eventKey="1">
-    <Accordion.Header><span>Q2</span><h6>By the readable content of a page when looking at its layout ?
+    <Accordion.Header><span>Q2</span><h6>How do I join the Killer Club House community? 
 </h6></Accordion.Header>
     <Accordion.Body>
-    <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised wordswhich don't look even slightly believable..</p>
-   <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary..</p>
+    <p>Anyone can join the KCH community by following on Twitter or joining Discord. Our most active, engaged, and helpful community members will become “family” (Or entry role)
+</p>
     </Accordion.Body>
   </Accordion.Item>
   <Accordion.Item eventKey="3">
-    <Accordion.Header><span>Q3</span><h6>It is a long established fact that a reader will be distracted ?</h6></Accordion.Header>
+    <Accordion.Header><span>Q3</span><h6>What are the benefits of joining Killer Club House?</h6></Accordion.Header>
     <Accordion.Body>
-    <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised wordswhich don't look even slightly believable..</p>
-   <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary..</p>    </Accordion.Body>
+    <p>A strong community is the backbone of any successful project. The possible benefits of a strong community are endless. Meet people that share your passion for horror and help us build a vibrant, influential and united community. 
+</p>   
+<p>There will be other more tangible benefits for KCH holders based on the given roles. 
+We have an ambitious <a href="#road">Roadmap</a> that provides more detail. 
+</p>
+ </Accordion.Body>
   </Accordion.Item>
   <Accordion.Item eventKey="4">
-    <Accordion.Header><span>Q4</span><h6>By the readable content of a page when looking at its layout ?</h6></Accordion.Header>
+    <Accordion.Header><span>Q4</span><h6>Will Killer Club House be present at CNFT con?  </h6></Accordion.Header>
     <Accordion.Body>
-    <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised wordswhich don't look even slightly believable..</p>
-   <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary..</p>    </Accordion.Body>
+    <p>Yes. Come by our booth and show us your KCH NFT. We may have a surprise for you!</p>    </Accordion.Body>
   </Accordion.Item>
   <Accordion.Item eventKey="5">
-    <Accordion.Header><span>Q5</span><h6>It is a long established fact that a reader will be distracted ?</h6></Accordion.Header>
+    <Accordion.Header><span>Q5</span><h6>How was the artwork created?</h6></Accordion.Header>
     <Accordion.Body>
-    <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised wordswhich don't look even slightly believable..</p>
-   <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary..</p>
+    <p>Killer Club House rooms are animated 3D NFTs created with manual generation. </p>
     </Accordion.Body>
-  </Accordion.Item>
-  <Accordion.Item eventKey="6">
-    <Accordion.Header><span>Q6</span><h6>By the readable content of a page when looking at its layout ?</h6></Accordion.Header>
-    <Accordion.Body>
-    <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised wordswhich don't look even slightly believable..</p>
-   <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary..</p>    </Accordion.Body>
   </Accordion.Item>
 </Accordion>
             </div>

@@ -1,16 +1,19 @@
 import sitelogo from '../Assets/logo-main.png';
 import { Container, Row, Col, Form, Button, Navbar, Nav } from "react-bootstrap";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { solid, regular, brands } from '@fortawesome/fontawesome-svg-core/import.macro';
+
 import { Link } from 'react-router-dom';
-import React, { Component, useState } from 'react';
+import React, { Component, useState, useEffect } from 'react';
 import ReactDOM, { render } from 'react-dom';
 import Section from './Switch.js'
-
+import ScrollToTop from './ScrollToTop';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { solid} from '@fortawesome/fontawesome-svg-core/import.macro';
 // SITE LOGO
 
 
 function Footer() {
+
+
   const [expanded, setExpanded] = useState(false);
 
 
@@ -33,21 +36,23 @@ function Footer() {
           </Nav>
       </div>
       <div className='footer-btm'>
-        <p>© 2022 Lorem Ipsum. All Rights Reserved</p>
-        <ul>
+      <p><FontAwesomeIcon icon={solid('envelope')} /> <a href='mailto:killerclubhouse@gmail.com'>killerclubhouse@gmail.com</a></p>
+        <p>© 2022 Killer Club House. All Rights Reserved</p>
+        {/* <ul>
               <li>
-                <a href='#' className='twt'>
-                   <FontAwesomeIcon icon={brands('twitter')} />
+                <a href='https://twitter.com/KillerClubhouse' className='twt' target='_blank'>
+                   <FontAwesomeIcon icon={solid('angles-up')} />
                 </a>
               </li>
               <li>
-                <a href='#' className='twi'>
+                <a href='https://discord.gg/X5TjRtkg' className='twi' target='_blank'>
                    <FontAwesomeIcon icon={brands('discord')} />
                 </a>
               </li>
-        </ul>
+        </ul> */}
       </div>
       </Container>
+      <ScrollToTop />
     </div>
   );
 }

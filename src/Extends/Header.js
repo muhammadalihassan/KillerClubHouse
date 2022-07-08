@@ -66,21 +66,21 @@ function Header() {
           <img src={sitelogo} alt='' className='bimg-3'/>
           </div>
         </Navbar.Brand>
-        <Navbar.Toggle aria-controls="basic-navbar-nav" onClick={() => setExpanded(expanded ? false : "expanded")} />
+        <Navbar.Toggle aria-controls="basic-navbar-nav" onClick={() => setExpanded(expanded ? false : "expanded")} id="close-button" htmlFor="nav"/>
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav >
-          <Nav.Link exact='true' href={'#home'} >Home</Nav.Link>
-                <Nav.Link exact='true' href={'#story'} >story</Nav.Link>
-                <Nav.Link exact='true' href={'#road'} >roadmap</Nav.Link>
+          <Nav.Link exact='true' href={'#home'} onClick={() => {document.getElementById("close-button").click()}}>Home</Nav.Link>
+                <Nav.Link exact='true' href={'#story'} onClick={() => {document.getElementById("close-button").click()}}>story</Nav.Link>
+                <Nav.Link exact='true' href={'#road'} onClick={() => {document.getElementById("close-button").click()}}>roadmap</Nav.Link>
                 <Navbar.Brand as={Link} to="/" className='des-view'>
             <div className='logo-main'>
           <img src={sitelogo} alt='' className='bimg-3'/>
           </div>
         </Navbar.Brand>
                 
-                <Nav.Link exact='true' href={'#team'} >team</Nav.Link>
-                <Nav.Link exact='true' href={'#faq'} >FAQ's</Nav.Link>
-                <Link to="/" className='wht-btn'>connect to wallet</Link>
+                <Nav.Link exact='true' href={'#team'} onClick={() => {document.getElementById("close-button").click()}}>team</Nav.Link>
+                <Nav.Link exact='true' href={'#faq'} onClick={() => {document.getElementById("close-button").click()}}>FAQ's</Nav.Link>
+                <Link to="/" className='wht-btn' onClick={() => {document.getElementById("close-button").click()}}>connect to wallet</Link>
             
           </Nav>
         </Navbar.Collapse>
