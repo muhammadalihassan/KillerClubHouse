@@ -61,7 +61,7 @@ function Header() {
             </ul>
           </div> */}
          <Navbar expand="lg" variant="dark" >
-         <Navbar.Brand as={Link} to="/" className='mob-view'>
+         <Navbar.Brand href={'#home'} onClick={() => {document.getElementById("close-button").click()}} className='mob-view'>
             <div className='logo-main'>
           <img src={sitelogo} alt='' className='bimg-3'/>
           </div>
@@ -72,7 +72,7 @@ function Header() {
           <Nav.Link exact='true' href={'#home'} onClick={() => {document.getElementById("close-button").click()}}>Home</Nav.Link>
                 <Nav.Link exact='true' href={'#story'} onClick={() => {document.getElementById("close-button").click()}}>story</Nav.Link>
                 <Nav.Link exact='true' href={'#road'} onClick={() => {document.getElementById("close-button").click()}}>roadmap</Nav.Link>
-                <Navbar.Brand as={Link} to="/" className='des-view'>
+                <Navbar.Brand href={'#home'} onClick={() => {document.getElementById("close-button").click()}} className='des-view'>
             <div className='logo-main'>
           <img src={sitelogo} alt='' className='bimg-3'/>
           </div>

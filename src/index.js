@@ -66,7 +66,7 @@ ReactDOM.render(
   <div className='overlay' ontouchstart={() => {document.getElementById("close-button").click()}} onscroll={() => {document.getElementById("close-button").click()}}>
   <div class="icon-bar">
   <a href="https://twitter.com/KillerClubhouse" class="twitter" target='_blank'> <FontAwesomeIcon icon={brands('twitter')} /></a> 
-  <a href="https://discord.gg/X5TjRtkg" class="discord" target='_blank'><FontAwesomeIcon icon={brands('discord')} /></a> 
+  <a href="https://discord.gg/rfU3S7b2se" class="discord" target='_blank'><FontAwesomeIcon icon={brands('discord')} /></a> 
 </div>
   <header className='pageheader'>
       <Header />

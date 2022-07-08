@@ -483,12 +483,12 @@ function App() {
                   <Tab.Content>
                     <Tab.Pane eventKey="first">
                       <ul>
-                        <li>The Killer Club House contains <b>5555</b> unique gut-wrenching NFTs. </li>
+                        {/* <li>The Killer Club House contains <b>5555</b> unique gut-wrenching NFTs. </li> */}
                         <li>Launch our Socials: <b>Website, Discord</b> and <b>Twitter</b>.</li>
-                        <li>Revealing the spine-tingling, bloodcurdling <b>LORE</b>. </li>
+                        <li>Revealing the spine-tingling, bloodcurdling LORE. </li>
                         <li>Releasing The Killer Club House <b>Story</b> and <b>Comic</b>. </li>
-                        <li>Reaching <b>5555</b> Twitter followers and <b>5555</b> Discord members. </li>
-                        <li><b>AMA</b> Session with our highly-enthusiastic and ambitious founders. </li>
+                        {/* <li>Reaching <b>5555</b> Twitter followers and <b>5555</b> Discord members. </li> */}
+                        <li><b>AMA</b> Session with our highly-enthusiastic and ambitious founder. </li>
                         <li><b>POLICY ID</b> & <b>MARKET PLACE</b> & <b>VR TRAILER</b>.</li>
                         <li>Launching The Killer Club House <b>Collection</b>.</li>
                       </ul>
@@ -498,8 +498,8 @@ function App() {
                         <li>Listing the Killer Club House on the <b>MARKET PLACE</b>. </li>
                         <li>RELEASE <b>STAKING</b> & <b>TOKENOMICS</b>.</li>
                         <li>HOLDERS <b>AIR DROP</b>.</li>
-                        <li>BEGIN DEVELOPMENT OF <b>VR ROOMS</b>.</li>
-                        <li>LAUNCH <b>VR EXPERIENCE</b>.</li>
+                        {/* <li>BEGIN DEVELOPMENT OF <b>VR ROOMS</b>.</li>
+                        <li>LAUNCH <b>VR EXPERIENCE</b>.</li> */}
                         <li><b>CNFT-CON BOOTH</b>.</li>
                         <li>SPECIAL <b>HALLOWEEN DROP</b>.</li>
                       </ul>
@@ -582,7 +582,7 @@ function App() {
                   <div className='team-img'>
                     <img src={t4} />
                     <div className='img-txt'>
-                    <h6>Ch₳dervox</h6>
+                    <h6>Ch₳ddervox</h6>
                       <ul>
                         <li>
                           <p><b>Influencer / Co-Host</b></p>
@@ -591,7 +591,7 @@ function App() {
                           <p><b>Twitter:</b> @ChadderVOX</p>
                         </li>
                         <li>
-                          <p><b>Discord:</b> @CH₳DDERVOX#8627</p>
+                          <p><b>Discord:</b> CH₳DDERVOX#8627</p>
                         </li>
                       </ul>
                     </div>
@@ -629,7 +629,7 @@ function App() {
                           <p><b>Twitter:</b> @SarahCole89</p>
                         </li>
                         <li>
-                          <p><b>Discord:</b> @Sallywarrior#4400</p>
+                          <p><b>Discord:</b> Sallywarrior#4400</p>
                         </li>
                       </ul>
                     </div>
@@ -644,9 +644,9 @@ function App() {
                         <li>
                           <p><b>Lead Developer / Artist</b></p>
                         </li>
-                        <li>
+                        {/* <li>
                           <p><b>Twitter:</b> @AnubisJ</p>
-                        </li>
+                        </li> */}
                         <li>
                           <p><b>Discord:</b> AnubisJ#6282</p>
                         </li>
@@ -667,7 +667,7 @@ function App() {
                           <p><b>Twitter:</b> @FarsightxNFT</p>
                         </li>
                         <li>
-                          <p><b>Discord:</b> @farsightx#8352</p>
+                          <p><b>Discord:</b> farsightx#8352</p>
                         </li>
                       </ul>
                     </div>
@@ -693,7 +693,9 @@ function App() {
     <Accordion.Header><span>Q2</span><h6>How do I join the Killer Club House community? 
 </h6></Accordion.Header>
     <Accordion.Body>
-    <p>Anyone can join the KCH community by following on Twitter or joining Discord. Our most active, engaged, and helpful community members will become “family” (Or entry role)
+    <p>Anyone can join the KCH community by following on 
+      Twitter or joining Discord. Our most active, engaged,
+       and helpful community members will become “family”.
 </p>
     </Accordion.Body>
   </Accordion.Item>
