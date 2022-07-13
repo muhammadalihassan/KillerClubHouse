@@ -585,8 +585,19 @@ text-transform: uppercase;
   margin-bottom: 15px;
   display: inline-block;
   font-weight: 300;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
+  text-align: left;
 
+
+}
+.road-phases .tab-pane ul p{
+  text-align: center;
+}
+.road-phases .tab-pane ul li span {
+  display: block;
+  font-weight: 700;
+  text-decoration: underline;
+  margin-bottom: 10px;
 }
 .road-phases .tab-pane ul{
   display: flex;

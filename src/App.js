@@ -483,30 +483,40 @@ function App() {
                   <Tab.Content>
                     <Tab.Pane eventKey="first">
                       <ul>
-                        {/* <li>The Killer Club House contains <b>5555</b> unique gut-wrenching NFTs. </li> */}
-                        <li>Launch our Socials: <b>Website, Discord</b> and <b>Twitter</b>.</li>
-                        <li>Revealing the spine-tingling, bloodcurdling LORE. </li>
-                        <li>Releasing The Killer Club House <b>Story</b> and <b>Comic</b>. </li>
-                        {/* <li>Reaching <b>5555</b> Twitter followers and <b>5555</b> Discord members. </li> */}
-                        <li><b>AMA</b> Session with our highly-enthusiastic and ambitious founder. </li>
-                        <li><b>POLICY ID</b> & <b>MARKET PLACE</b> & <b>VR TRAILER</b>.</li>
-                        <li>Launching The Killer Club House <b>Collection</b>.</li>
+                        <li><b>KCH</b> is full of treats, not tricks. We are here to
+                           provide the Cardano Community with horror year-round.
+                            We’ve been hard at work for eight months putting together
+                             a long-term plan for our community. First, let's go over what
+                              you can expect in the near future:</li>
+                        <li><span>Socials</span>  Launch Twitter, Website, and Discord.</li>
+                        <li>
+                        <span>Twitter Spaces </span>We initially plan to join already established spaces to introduce ourselves, followed by an AMA.  Eventually, we will host our own spaces as the community grows.
+                        </li>
+                        <li><span>Community</span>We will be offering many ways to whitelist.<br />Some roles will be based on your interests and activity level. We will also host giveaways, movie nights, and trivia</li>
+                        <li><span>Marketing</span>
+                          As the launch draws near, we will be participating in numerous shows from established Cardano influencers. We will also be sharing sneak peaks.</li>
+                        <li><span><b>KCH</b> Rooms</span>
+                        What is a project without NFTs? Our collection will be verified and listed on all relevant marketplaces. At this time, a policy ID will also be provided.
+                        </li>
+                        <li><span>Launch</span>
+                        Our mint will feature 5555 unique gut-wrenching NFTs
+                        </li>
                       </ul>
                     </Tab.Pane>
                     <Tab.Pane eventKey="second">
                       <ul>
-                        <li>Listing the Killer Club House on the <b>MARKET PLACE</b>. </li>
+                      <p><b>Coming Soon</b>. </p>
+                        {/* <li>Listing the Killer Club House on the <b>MARKET PLACE</b>. </li>
                         <li>RELEASE <b>STAKING</b> & <b>TOKENOMICS</b>.</li>
                         <li>HOLDERS <b>AIR DROP</b>.</li>
-                        {/* <li>BEGIN DEVELOPMENT OF <b>VR ROOMS</b>.</li>
-                        <li>LAUNCH <b>VR EXPERIENCE</b>.</li> */}
+                        
                         <li><b>CNFT-CON BOOTH</b>.</li>
-                        <li>SPECIAL <b>HALLOWEEN DROP</b>.</li>
+                        <li>SPECIAL <b>HALLOWEEN DROP</b>.</li> */}
                       </ul>
                     </Tab.Pane>
                     <Tab.Pane eventKey="third">
                       <ul>
-                        <li><b>Coming Soon</b>. </li>
+                        <p><b>Coming Soon</b>. </p>
                       </ul>
                     </Tab.Pane>
                   </Tab.Content>
@@ -693,7 +703,7 @@ function App() {
     <Accordion.Header><span>Q2</span><h6>How do I join the Killer Club House community? 
 </h6></Accordion.Header>
     <Accordion.Body>
-    <p>Anyone can join the KCH community by following on 
+    <p>Anyone can join the <b>KCH</b> community by following on 
       Twitter or joining Discord. Our most active, engaged,
        and helpful community members will become “family”.
 </p>
@@ -704,7 +714,7 @@ function App() {
     <Accordion.Body>
     <p>A strong community is the backbone of any successful project. The possible benefits of a strong community are endless. Meet people that share your passion for horror and help us build a vibrant, influential and united community. 
 </p>   
-<p>There will be other more tangible benefits for KCH holders based on the given roles. 
+<p>There will be other more tangible benefits for <b>KCH</b> holders based on the given roles. 
 We have an ambitious <a href="#road">Roadmap</a> that provides more detail. 
 </p>
  </Accordion.Body>
@@ -712,7 +722,7 @@ We have an ambitious <a href="#road">Roadmap</a> that provides more detail.
   <Accordion.Item eventKey="4">
     <Accordion.Header><span>Q4</span><h6>Will Killer Club House be present at CNFT con?  </h6></Accordion.Header>
     <Accordion.Body>
-    <p>Yes. Come by our booth and show us your KCH NFT. We may have a surprise for you!</p>    </Accordion.Body>
+    <p>Yes. Come by our booth and show us your <b>KCH</b> NFT. We may have a surprise for you!</p>    </Accordion.Body>
   </Accordion.Item>
   <Accordion.Item eventKey="5">
     <Accordion.Header><span>Q5</span><h6>How was the artwork created?</h6></Accordion.Header>
