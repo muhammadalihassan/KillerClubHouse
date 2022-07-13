@@ -1,9 +1,8 @@
 import React, {useState, Component} from 'react';
 import story from './Assets/story.jpg';
 import t1 from './Assets/john.jpeg';
+import t2 from './Assets/kryp.jpg';
 import t21 from './Assets/sally1.jpeg';
-import t22 from './Assets/sally2.jpeg';
-import t23 from './Assets/sally3.jpeg';
 import t3 from './Assets/flawwed.jpeg';
 import t4 from './Assets/chadder.jpeg';
 import t5 from './Assets/ap.jpg';
@@ -16,6 +15,8 @@ import tomb3 from './Assets/tomb3.png';
 import tomb4 from './Assets/tomb4.png';
 import { Link } from 'react-router-dom';
 import { Container, Row, Col, Accordion, Tab, Nav } from 'react-bootstrap';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { solid, regular, brands } from '@fortawesome/fontawesome-svg-core/import.macro';
 // AOS
 // import ScrollUpButton from "react-scroll-up-button"; //Add this line Here
  
@@ -113,9 +114,9 @@ function App() {
       return (
         <>
           {!playing && (
-            <i onClick={this.startAudio}>...read more</i>
+            <FontAwesomeIcon onClick={this.startAudio} icon={solid('volume-xmark')} />
           )}
-          {playing && <i onClick={this.pauseAudio}>show less</i>}
+          {playing && <FontAwesomeIcon onClick={this.pauseAudio} icon={solid('volume-high')} />}
   
           <audio
             src={lore}
@@ -281,8 +282,7 @@ function App() {
                                       <li>For his is the only home humanity will reside.</li>
                                      </ul>
           </span>}
-          <a href="javascript:void(0)" onClick={() => setShow(prev => !prev)}><AudioButton src={lore} >
-         </AudioButton>  </a>
+          <a href="javascript:void(0)" onClick={() => setShow(prev => !prev)}>{!show? "...read more" : " show less"}  </a>
           
       </>
     );
@@ -297,13 +297,14 @@ function App() {
       {/* <ScrollUpButton /> */}
         <Container >
           <div className='banner-main' id="home">
-            <h6>welcome to killer </h6>
+            <h6>welcome to <span>k</span>iller </h6>
             <div className="main">
       
     </div>
-            <h1 data-aos="fade-down">club House</h1>
+            <h1 data-aos="fade-down"><span>c</span>lub <span>H</span>ouse</h1>
             <p>
-            There are some things that should be left hidden. That should be ignored and forgotten.
+            <a href="javascript:void(0)" className='play-audio'><AudioButton src={lore} >
+         </AudioButton></a>There are some things that should be left hidden. That should be ignored and forgotten.
              Left to the sands of time. Buried deep below, to never again bear witness to the celestial skies.
               Some evils are… older… than we can possibly fathom with our feeble faculties. <Search />
             </p>
@@ -343,7 +344,7 @@ function App() {
             <div className='about-txt'>
               <h2 className='big-txt' >about us</h2>
               <div className='abt-headings'>
-              <h3 className='small-txt'>killer club House about</h3>
+              <h3 className='small-txt'><b>K</b>iller <b>C</b>lub <b>H</b>ouse about</h3>
               <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
                  standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make
                   a type specimen book. It has survived not only five centuries, but also the leap into electronic.</p>
@@ -474,9 +475,9 @@ function App() {
                     <Nav.Item>
                       <Nav.Link eventKey="second">Phase 2</Nav.Link>
                     </Nav.Item>
-                    <Nav.Item>
+                    {/* <Nav.Item>
                       <Nav.Link eventKey="third">Phase 3</Nav.Link>
-                    </Nav.Item>
+                    </Nav.Item> */}
                   </Nav>
                 </Col>
                 <Col sm={12}>
@@ -506,7 +507,7 @@ function App() {
                     <Tab.Pane eventKey="second">
                       <ul>
                       <p><b>Coming Soon</b>. </p>
-                        {/* <li>Listing the Killer Club House on the <b>MARKET PLACE</b>. </li>
+                        {/* <li>Listing the <b>K</b>iller <b>C</b>lub <b>H</b>ouse on the <b>MARKET PLACE</b>. </li>
                         <li>RELEASE <b>STAKING</b> & <b>TOKENOMICS</b>.</li>
                         <li>HOLDERS <b>AIR DROP</b>.</li>
                         
@@ -514,11 +515,11 @@ function App() {
                         <li>SPECIAL <b>HALLOWEEN DROP</b>.</li> */}
                       </ul>
                     </Tab.Pane>
-                    <Tab.Pane eventKey="third">
+                    {/* <Tab.Pane eventKey="third">
                       <ul>
                         <p><b>Coming Soon</b>. </p>
                       </ul>
-                    </Tab.Pane>
+                    </Tab.Pane> */}
                   </Tab.Content>
                 </Col>
               </Row>
@@ -529,7 +530,7 @@ function App() {
             <div className='team-txt'>
               <h2 className='big-txt' >team</h2>
               <div className='abt-headings'>
-              <h3 className='small-txt'>killer club House team</h3>
+              <h3 className='small-txt'><b>K</b>iller <b>C</b>lub <b>H</b>ouse team</h3>
               </div>
               <div className='team-sub-h'>
                 <h4>FOUNDERS</h4>
@@ -553,7 +554,7 @@ function App() {
                 </Col>
                 <Col md={6} lg={4} xl={4}>
                   <div className='team-img'>
-                    <img src={t21} />
+                    <img src={t2} />
                     <div className='img-txt'>
                     <h6>Kryptock</h6>
                       <ul>
@@ -694,13 +695,13 @@ function App() {
               </div>
               <Accordion>
   <Accordion.Item eventKey="0">
-    <Accordion.Header><span>Q1</span><h6>What is Killer Club House? </h6></Accordion.Header>
+    <Accordion.Header><span>Q1</span><h6>What is <b>K</b>iller <b>C</b>lub <b>H</b>ouse? </h6></Accordion.Header>
     <Accordion.Body>
-      <p>Killer Club House is a CNFT experience unlike any other that was created by horror fans for horror fans.</p>
+      <p><b>K</b>iller <b>C</b>lub <b>H</b>ouse is a CNFT experience unlike any other that was created by horror fans for horror fans.</p>
     </Accordion.Body>
   </Accordion.Item>
   <Accordion.Item eventKey="1">
-    <Accordion.Header><span>Q2</span><h6>How do I join the Killer Club House community? 
+    <Accordion.Header><span>Q2</span><h6>How do I join the <b>K</b>iller <b>C</b>lub <b>H</b>ouse community? 
 </h6></Accordion.Header>
     <Accordion.Body>
     <p>Anyone can join the <b>KCH</b> community by following on 
@@ -710,7 +711,7 @@ function App() {
     </Accordion.Body>
   </Accordion.Item>
   <Accordion.Item eventKey="3">
-    <Accordion.Header><span>Q3</span><h6>What are the benefits of joining Killer Club House?</h6></Accordion.Header>
+    <Accordion.Header><span>Q3</span><h6>What are the benefits of joining <b>K</b>iller <b>C</b>lub <b>H</b>ouse?</h6></Accordion.Header>
     <Accordion.Body>
     <p>A strong community is the backbone of any successful project. The possible benefits of a strong community are endless. Meet people that share your passion for horror and help us build a vibrant, influential and united community. 
 </p>   
@@ -720,14 +721,14 @@ We have an ambitious <a href="#road">Roadmap</a> that provides more detail.
  </Accordion.Body>
   </Accordion.Item>
   <Accordion.Item eventKey="4">
-    <Accordion.Header><span>Q4</span><h6>Will Killer Club House be present at CNFT con?  </h6></Accordion.Header>
+    <Accordion.Header><span>Q4</span><h6>Will <b>K</b>iller <b>C</b>lub <b>H</b>ouse be present at CNFT con?  </h6></Accordion.Header>
     <Accordion.Body>
     <p>Yes. Come by our booth and show us your <b>KCH</b> NFT. We may have a surprise for you!</p>    </Accordion.Body>
   </Accordion.Item>
   <Accordion.Item eventKey="5">
     <Accordion.Header><span>Q5</span><h6>How was the artwork created?</h6></Accordion.Header>
     <Accordion.Body>
-    <p>Killer Club House rooms are animated 3D NFTs created with manual generation. </p>
+    <p><b>K</b>iller <b>C</b>lub <b>H</b>ouse rooms are animated 3D NFTs created with manual generation. </p>
     </Accordion.Body>
   </Accordion.Item>
 </Accordion>
