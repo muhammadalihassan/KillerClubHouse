@@ -577,10 +577,10 @@ function App() {
                   <div className='team-img'>
                     <img src={t3} />
                     <div className='img-txt'>
-                    <h6>Flawwed</h6>
+                    <h6>Flawwed1</h6>
                       <ul>
                         <li>
-                          <p><b>Main Host / HR / Project Consultant / Marketing Strategist</b></p>
+                          <p><b>Main Host / HR / Project Lead / Marketing Strategist</b></p>
                         </li>
                         <li>
                           <p><b>Twitter:</b> @Flawwed1Art</p>
