@@ -36,7 +36,7 @@ function Footer() {
           </Nav>
       </div>
       <div className='footer-btm'>
-      <p><FontAwesomeIcon icon={solid('envelope')} /> <a href='mailto:killerclubhouse@gmail.com'>killerclubhouse@gmail.com</a></p>
+      <p><FontAwesomeIcon icon={solid('envelope')} /> <a href='mailto:inquiry@killerclubhouse.io'>inquiry@killerclubhouse.io</a></p>
         <p>© 2022 Killer Club House. All Rights Reserved</p>
         {/* <ul>
               <li>
