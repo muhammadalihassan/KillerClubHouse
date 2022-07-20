@@ -213,8 +213,7 @@ function App() {
                            tastes and smells! The many creatures and performers! 
                            People of all shapes and sizes, colors and creeds, were
                             represented there. Everyone was really into dressing the
-                             part. The carnival was like a melting pot of every festival
-                             , from the height of every empire, selecting only the best 
+                             part. The carnival was like a melting pot of every festival from the height of every empire, selecting only the best 
                              every corner of the globe had to offer, and bottling it all 
                              up into one place. What a blessing! What a fine memory for 
                              our children to cherish! The Connors couldn’t help but think. 
@@ -489,11 +488,11 @@ function App() {
                             We’ve been hard at work for eight months putting together
                              a long-term plan for our community. First, let's go over what
                               you can expect in the near future:</li>
-                        <li><span>Socials</span>  Launch Twitter, Website, and Discord.</li>
+                        <li><span>Socials</span>  Launch Twitter, Website and Discord.</li>
                         <li>
                         <span>Twitter Spaces </span>We initially plan to join already established spaces to introduce ourselves, followed by an AMA.  Eventually, we will host our own spaces as the community grows.
                         </li>
-                        <li><span>Community</span>We will be offering many ways to whitelist.<br />Some roles will be based on your interests and activity level. We will also host giveaways, movie nights, and trivia</li>
+                        <li><span>Community</span>We will be offering many ways to whitelist.<br />Some roles will be based on your interests and activity level. We will also host giveaways, movie nights and trivia</li>
                         <li><span>Marketing</span>
                           As the launch draws near, we will be participating in numerous shows from established Cardano influencers. We will also be sharing sneak peaks.</li>
                         <li><span><b>KCH</b> Rooms</span>
