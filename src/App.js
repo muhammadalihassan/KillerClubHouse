@@ -173,7 +173,7 @@ function App() {
            but the surrounding countryside clearly flourished, 
            with no evidence of a spreading plant disease or unchecked
             insect infestation. Not ones to let superstition get the
-             best of them, and capitalizing on the desperation of 
+             best of them and capitalizing on the desperation of 
              the locals, the Connors purchased several farms adjacent
               to the “blasted heath,” and combined them into an impressive
                estate.
@@ -184,7 +184,7 @@ function App() {
                with tending to the needs of the family in the country manor,
                 as well as its surrounding gardens. Their son was a vibrant 
                 dreamer and gravitated to painting them from time-to-time. 
-                Their daughter was an avid reader, and took to crafting her 
+                Their daughter was an avid reader and took to crafting her 
                 own fairy tales filled with ancient magic and fantastical 
                 creatures. As hoped, the children thrived in rural life, 
                 especially with their newfound friendships with kids from 
@@ -214,7 +214,7 @@ function App() {
                            People of all shapes and sizes, colors and creeds, were
                             represented there. Everyone was really into dressing the
                              part. The carnival was like a melting pot of every festival from the height of every empire, selecting only the best 
-                             every corner of the globe had to offer, and bottling it all 
+                             every corner of the globe had to offer and bottling it all 
                              up into one place. What a blessing! What a fine memory for 
                              our children to cherish! The Connors couldn’t help but think. 
                              As the Connors were about to return home, along with the rest 
@@ -251,7 +251,7 @@ function App() {
                    much worse… The only clues of this history now remain in the relics of this hideous, long-lost past.
                     But they are not telling their secrets, for their essence is more sinister than any expression 
                     of malevolence that has manifested in our human condition. Why should they speak? These… Vessels…
-                     have us right where they want us…. Distracted, decadent, and divided. Prime livestock in the never-ending
+                     have us right where they want us…. Distracted, decadent and divided. Prime livestock in the never-ending
                       harvest of souls. One day, the grand tapestry will reveal itself, the cup filled to the brim with the wailings
                        of the damned. Then the eternal night will descend upon us all!
                        <br /><br />The game the Vessels play is long…. Dramatic calamity will strike during one epoch
@@ -261,17 +261,17 @@ function App() {
                             civilization. Each Vessel has a particular way of savoring the delicacy of a human soul,
                              prolonging the agonizing tragedy in the wake of its wrath. To better relish in the cruel
                               irony, they often take the forms of innocent objects normally associated with human 
-                              expressions of love, community, honor, harmony, and happiness. Cloaked in subterfuge,
+                              expressions of love, community, honor, harmony and happiness. Cloaked in subterfuge
                                and emersed in the proximity of pain, they feed….<br /><br />
                                How could any of us hope to resist? For whom could possibly know to confront the embodiment
                                  of evil when it is camouflaged in that of a wedding ring? Cursed to bring those who swear vows
-                                  upon it, a spirit of infidelity, deception, and treachery. Bringing family members to turn on 
+                                  upon it, a spirit of infidelity, deception and treachery. Bringing family members to turn on 
                                   one another, inevitably in horrendous violence. Who would have thought that a simple fur pelt,
                                    used to bring warmth and survival, could twist its subjects into hideous demonic beasts, craving 
                                    greed-induced murder of their whole tribe? Who would have guessed that an ancient pyramid, housing
                                     the royal dead, was the voice behind a beckoning call, entrancing disoriented villagers to entomb 
                                     themselves in its deepest burial chambers? How were we to detect corrupted relics at the monastery 
-                                    that when used in supplication, sow the seeds of discord, conflagration, and rebellion? Who could possibly
+                                    that when used in supplication, sow the seeds of discord, conflagration and rebellion? Who could possibly
                                      fathom a little child’s plaything, a teddy bear possessed, procured at something as innocuous as a 
                                      traveling carnival, corrupting those around it into the most terrifying instruments of perpetual despair?<br /><br />
                                      So many lives were ruined. So many yet to be…<br /><br />
@@ -372,14 +372,14 @@ function App() {
                   was a skilled butcher by trade, while his wife was a 
                   homemaker as was common for married women of the time.
                    Wishing to raise their two young children in a more 
-                   traditional manner, and after coming into a small inheritance,
+                   traditional manner and after coming into a small inheritance,
                     the family left the city and headed into the countryside. </p>
                     <p>The year was 1892. As the Connor family was searching for a plot 
                       of land to settle, all the locals they talked to seemed anxious to
                        leave. They frequently would bargain downward to try and secure a
                         quick deal, as only the Connors had come looking to buy in God knows
                          how long. In search of their motivations, Mr. Connor gathered a few
-                          rumors referencing a “blasted heath” nearby, and a cloud of madness 
+                          rumors referencing a “blasted heath” nearby and a cloud of madness 
                           that surrounded the now decade deceased owners. </p>
                 </Col>
               </Row>
@@ -390,7 +390,7 @@ function App() {
            but the surrounding countryside clearly flourished, 
            with no evidence of a spreading plant disease or unchecked
             insect infestation. Not ones to let superstition get the
-             best of them, and capitalizing on the desperation of 
+             best of them and capitalizing on the desperation of 
              the locals, the Connors purchased several farms adjacent
               to the “blasted heath,” and combined them into an impressive
                estate.</p>
@@ -401,7 +401,7 @@ function App() {
                with tending to the needs of the family in the country manor,
                 as well as its surrounding gardens. Their son was a vibrant 
                 dreamer and gravitated to painting them from time-to-time. 
-                Their daughter was an avid reader, and took to crafting her 
+                Their daughter was an avid reader and took to crafting her 
                 own fairy tales filled with ancient magic and fantastical 
                 creatures. As hoped, the children thrived in rural life, 
                 especially with their newfound friendships with kids from 
@@ -432,7 +432,7 @@ function App() {
                             represented there. Everyone was really into dressing the
                              part. The carnival was like a melting pot of every festival
                              , from the height of every empire, selecting only the best 
-                             every corner of the globe had to offer, and bottling it all 
+                             every corner of the globe had to offer and bottling it all 
                              up into one place. What a blessing! What a fine memory for 
                              our children to cherish! The Connors couldn’t help but think. 
                              As the Connors were about to return home, along with the rest 
