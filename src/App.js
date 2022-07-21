@@ -296,13 +296,13 @@ function App() {
       {/* <ScrollUpButton /> */}
         <Container >
           <div className='banner-main' id="home">
-            <h6>welcome to <span>k</span>iller </h6>
+            {/* <h6>welcome to <span>k</span>iller </h6> */}
             <div className="main">
       
     </div>
-            <h1 data-aos="fade-down"><span>c</span>lub <span>H</span>ouse</h1>
+            <h1 data-aos="fade-down" id="lore"><span>k</span>iller <br /><span>c</span>lub <span>H</span>ouse</h1>
             <p>
-            <a href="javascript:void(0)" className='play-audio'><AudioButton src={lore} >
+            <a href="javascript:void(0)" className='play-audio' ><AudioButton src={lore}>
          </AudioButton></a>There are some things that should be left hidden. That should be ignored and forgotten.
              Left to the sands of time. Buried deep below, to never again bear witness to the celestial skies.
               Some evils are… older… than we can possibly fathom with our feeble faculties. <Search />
@@ -430,8 +430,7 @@ function App() {
                            tastes and smells! The many creatures and performers! 
                            People of all shapes and sizes, colors and creeds, were
                             represented there. Everyone was really into dressing the
-                             part. The carnival was like a melting pot of every festival
-                             , from the height of every empire, selecting only the best 
+                             part. The carnival was like a melting pot of every festival from the height of every empire, selecting only the best 
                              every corner of the globe had to offer and bottling it all 
                              up into one place. What a blessing! What a fine memory for 
                              our children to cherish! The Connors couldn’t help but think. 
@@ -539,8 +538,10 @@ function App() {
                   <div className='team-img'>
                     <img src={t1} />
                     <div className='img-txt'>
-                      <h6>John A</h6>
+                      <h6>John Anderson</h6>
                       <ul>
+                        <li><p><i>JohnA</i></p></li>
+                        <li><p>Lubbock Texas</p></li>
                         <li>
                           <p><b>Twitter:</b> @Johnand94830005</p>
                         </li>
@@ -555,8 +556,10 @@ function App() {
                   <div className='team-img'>
                     <img src={t2} />
                     <div className='img-txt'>
-                    <h6>Kryptock</h6>
+                    <h6>Richard Cole</h6>
                       <ul>
+                      <li><p><i>Kryptock</i></p></li>
+                      <li><p>Lubbock Texas</p></li>
                         <li>
                           <p><b>Twitter:</b> @Rcole89</p>
                         </li>

@@ -259,7 +259,7 @@ color: #f60801;
   background-image: url('Assets/blood.png');
   background-repeat: repeat;
   -webkit-background-clip: text;
-  background-position: 34px -273px;
+  background-position: 293px -625px;
   -webkit-text-fill-color: transparent;
   background-size: cover;
   margin: 0;
@@ -268,6 +268,8 @@ color: #f60801;
 }
 .banner-main h1 span {
   font-size: 290px;
+  /* color: #000 !important; */
+  -webkit-text-fill-color: #f71002;
 }
 .banner-main p {
   width: 80%;
@@ -459,6 +461,9 @@ text-transform: uppercase;
 }
 /* about css end */
 /* story css start */
+#story {
+  display: none;
+}
 .story-accord .accordion-item {
   background-color: transparent;
 }
