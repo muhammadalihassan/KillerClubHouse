@@ -8,6 +8,7 @@ import t4 from './Assets/chadder.jpeg';
 import t5 from './Assets/ap.jpg';
 import t6 from './Assets/anibus.jpeg'; 
 import t7 from './Assets/farsight.jpeg'; 
+import t8 from './Assets/prof.jpg'; 
 import lore from './Assets/lore.mp3'
 import tomb1 from './Assets/tomb1.png';
 import tomb2 from './Assets/tomb2.png';
@@ -681,6 +682,22 @@ function App() {
                         </li>
                         <li>
                           <p><b>Discord:</b> farsightx#8352</p>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </Col>
+                <Col md={6} lg={4} xl={4}>
+                  <div className='team-img'>
+                    <img src={t8} />
+                    <div className='img-txt'>
+                    <h6>Professor Grimwald</h6>
+                      <ul>
+                        <li>
+                          <p><b>Project writer </b></p>
+                        </li>
+                        <li>
+                          <p><b>Twitter:</b> @prof_grimwald</p>
                         </li>
                       </ul>
                     </div>
