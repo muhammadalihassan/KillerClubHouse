@@ -248,7 +248,9 @@ color: #f60801;
   font-size: 27px;
   letter-spacing: 9px;
 }
-
+.banner-main h6 span {
+  font-size: 40px;
+}
 .banner-main h1 {
   font-size: 13rem;
   text-transform: uppercase;
@@ -257,12 +259,17 @@ color: #f60801;
   background-image: url('Assets/blood.png');
   background-repeat: repeat;
   -webkit-background-clip: text;
-  background-position: 34px -273px;
+  background-position: 293px -625px;
   -webkit-text-fill-color: transparent;
   background-size: cover;
   margin: 0;
   word-spacing: -50px;
 
+}
+.banner-main h1 span {
+  font-size: 290px;
+  /* color: #000 !important; */
+  -webkit-text-fill-color: #f71002;
 }
 .banner-main p {
   width: 80%;
@@ -317,6 +324,10 @@ color: #f60801;
   font-size: 21PX;
   letter-spacing: 1px;
   margin-left: 10px;
+}
+.play-audio {
+  display: inline-block;
+  min-width: 40px;
 }
 .banner-main li {
   font-family: 'Open Sans', sans-serif;
@@ -409,6 +420,10 @@ text-transform: uppercase;
   position: relative;
   z-index: 99;
 }
+.small-txt b {
+  font-size: 142px;
+  font-weight: initial;
+}
 .about-txt h3:after {
   content: '';
   position: absolute;
@@ -446,6 +461,9 @@ text-transform: uppercase;
 }
 /* about css end */
 /* story css start */
+#story {
+  display: none;
+}
 .story-accord .accordion-item {
   background-color: transparent;
 }
@@ -577,7 +595,7 @@ text-transform: uppercase;
   justify-content: space-evenly;
 }
 .road-phases .tab-pane ul li b {
-  font-weight: 600;
+  font-weight: 900;
 }
 .road-phases .tab-pane ul li {
   font-family: 'Open Sans';
@@ -585,8 +603,19 @@ text-transform: uppercase;
   margin-bottom: 15px;
   display: inline-block;
   font-weight: 300;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
+  text-align: left;
 
+
+}
+.road-phases .tab-pane ul p{
+  text-align: center;
+}
+.road-phases .tab-pane ul li span {
+  display: block;
+  font-weight: 700;
+  text-decoration: underline;
+  margin-bottom: 10px;
 }
 .road-phases .tab-pane ul{
   display: flex;
@@ -1211,6 +1240,9 @@ transform: scale(1.1);
   align-items: center;
   border: none;
 }
+.faq-sec .accordion-button b {
+  font-size: 30px;
+}
 .faq-sec .accordion-button:focus{
   box-shadow: none;
 }
@@ -1425,8 +1457,12 @@ transform: scale(1.1);
 }
 .banner-main h1 {
   font-size: 7rem;
-  line-height: 120px;
-  background-position: 0px -623px;
+    line-height: 340px;
+    background-position: 23px -536px;
+}
+.small-txt b {
+  font-size: 115px;
+  font-weight: unset;
 }
 .big-txt {
   font-size: 8rem;
@@ -1519,8 +1555,14 @@ transform: scale(1.1);
 }
 .banner-main h1 {
   font-size: 7rem;
-  line-height: 120px;
-  background-position: 49px -422px;
+  line-height: 160px;
+  background-position: -56px -534px;
+}
+.banner-main h1 span {
+  font-size: 180px;
+}
+.small-txt b {
+  font-size: 82px;
 }
 .big-txt {
   font-size: 8rem;
@@ -1600,7 +1642,12 @@ transform: scale(1.1);
     line-height: initial;
     margin-left: 30px;
     background-position: 31px -341px;
+    letter-spacing: 25px;
 
+}
+.banner-main h1 span {
+  font-size: 70px;
+  display: inline !important;
 }
 .banner-main h1 span{
   display: block;
@@ -1619,6 +1666,9 @@ transform: scale(1.1);
 }
 .small-txt {
   font-size: 2rem;
+}
+.small-txt b {
+  font-size: 3rem;
 }
 .abt-headings {
   margin-top: 0;
@@ -1693,6 +1743,9 @@ transform: scale(1.1);
 }
 .faq-sec .accordion-button span {
   font-size: 23px;
+}
+.faq-sec .accordion-button b {
+  font-size: 20px;
 }
 .faq-sec .accordion-button::after {
   padding: 12px 12px 12px;

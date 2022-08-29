@@ -1,14 +1,14 @@
 import React, {useState, Component} from 'react';
 import story from './Assets/story.jpg';
 import t1 from './Assets/john.jpeg';
+import t2 from './Assets/kryp.jpg';
 import t21 from './Assets/sally1.jpeg';
-import t22 from './Assets/sally2.jpeg';
-import t23 from './Assets/sally3.jpeg';
 import t3 from './Assets/flawwed.jpeg';
 import t4 from './Assets/chadder.jpeg';
 import t5 from './Assets/ap.jpg';
 import t6 from './Assets/anibus.jpeg'; 
 import t7 from './Assets/farsight.jpeg'; 
+import t8 from './Assets/prof.jpg'; 
 import lore from './Assets/lore.mp3'
 import tomb1 from './Assets/tomb1.png';
 import tomb2 from './Assets/tomb2.png';
@@ -16,6 +16,8 @@ import tomb3 from './Assets/tomb3.png';
 import tomb4 from './Assets/tomb4.png';
 import { Link } from 'react-router-dom';
 import { Container, Row, Col, Accordion, Tab, Nav } from 'react-bootstrap';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { solid, regular, brands } from '@fortawesome/fontawesome-svg-core/import.macro';
 // AOS
 // import ScrollUpButton from "react-scroll-up-button"; //Add this line Here
  
@@ -113,9 +115,9 @@ function App() {
       return (
         <>
           {!playing && (
-            <i onClick={this.startAudio}>...read more</i>
+            <FontAwesomeIcon onClick={this.startAudio} icon={solid('volume-xmark')} />
           )}
-          {playing && <i onClick={this.pauseAudio}>show less</i>}
+          {playing && <FontAwesomeIcon onClick={this.pauseAudio} icon={solid('volume-high')} />}
   
           <audio
             src={lore}
@@ -172,7 +174,7 @@ function App() {
            but the surrounding countryside clearly flourished, 
            with no evidence of a spreading plant disease or unchecked
             insect infestation. Not ones to let superstition get the
-             best of them, and capitalizing on the desperation of 
+             best of them and capitalizing on the desperation of 
              the locals, the Connors purchased several farms adjacent
               to the “blasted heath,” and combined them into an impressive
                estate.
@@ -183,7 +185,7 @@ function App() {
                with tending to the needs of the family in the country manor,
                 as well as its surrounding gardens. Their son was a vibrant 
                 dreamer and gravitated to painting them from time-to-time. 
-                Their daughter was an avid reader, and took to crafting her 
+                Their daughter was an avid reader and took to crafting her 
                 own fairy tales filled with ancient magic and fantastical 
                 creatures. As hoped, the children thrived in rural life, 
                 especially with their newfound friendships with kids from 
@@ -212,9 +214,8 @@ function App() {
                            tastes and smells! The many creatures and performers! 
                            People of all shapes and sizes, colors and creeds, were
                             represented there. Everyone was really into dressing the
-                             part. The carnival was like a melting pot of every festival
-                             , from the height of every empire, selecting only the best 
-                             every corner of the globe had to offer, and bottling it all 
+                             part. The carnival was like a melting pot of every festival from the height of every empire, selecting only the best 
+                             every corner of the globe had to offer and bottling it all 
                              up into one place. What a blessing! What a fine memory for 
                              our children to cherish! The Connors couldn’t help but think. 
                              As the Connors were about to return home, along with the rest 
@@ -251,7 +252,7 @@ function App() {
                    much worse… The only clues of this history now remain in the relics of this hideous, long-lost past.
                     But they are not telling their secrets, for their essence is more sinister than any expression 
                     of malevolence that has manifested in our human condition. Why should they speak? These… Vessels…
-                     have us right where they want us…. Distracted, decadent, and divided. Prime livestock in the never-ending
+                     have us right where they want us…. Distracted, decadent and divided. Prime livestock in the never-ending
                       harvest of souls. One day, the grand tapestry will reveal itself, the cup filled to the brim with the wailings
                        of the damned. Then the eternal night will descend upon us all!
                        <br /><br />The game the Vessels play is long…. Dramatic calamity will strike during one epoch
@@ -261,17 +262,17 @@ function App() {
                             civilization. Each Vessel has a particular way of savoring the delicacy of a human soul,
                              prolonging the agonizing tragedy in the wake of its wrath. To better relish in the cruel
                               irony, they often take the forms of innocent objects normally associated with human 
-                              expressions of love, community, honor, harmony, and happiness. Cloaked in subterfuge,
+                              expressions of love, community, honor, harmony and happiness. Cloaked in subterfuge
                                and emersed in the proximity of pain, they feed….<br /><br />
                                How could any of us hope to resist? For whom could possibly know to confront the embodiment
                                  of evil when it is camouflaged in that of a wedding ring? Cursed to bring those who swear vows
-                                  upon it, a spirit of infidelity, deception, and treachery. Bringing family members to turn on 
+                                  upon it, a spirit of infidelity, deception and treachery. Bringing family members to turn on 
                                   one another, inevitably in horrendous violence. Who would have thought that a simple fur pelt,
                                    used to bring warmth and survival, could twist its subjects into hideous demonic beasts, craving 
                                    greed-induced murder of their whole tribe? Who would have guessed that an ancient pyramid, housing
                                     the royal dead, was the voice behind a beckoning call, entrancing disoriented villagers to entomb 
                                     themselves in its deepest burial chambers? How were we to detect corrupted relics at the monastery 
-                                    that when used in supplication, sow the seeds of discord, conflagration, and rebellion? Who could possibly
+                                    that when used in supplication, sow the seeds of discord, conflagration and rebellion? Who could possibly
                                      fathom a little child’s plaything, a teddy bear possessed, procured at something as innocuous as a 
                                      traveling carnival, corrupting those around it into the most terrifying instruments of perpetual despair?<br /><br />
                                      So many lives were ruined. So many yet to be…<br /><br />
@@ -281,8 +282,7 @@ function App() {
                                       <li>For his is the only home humanity will reside.</li>
                                      </ul>
           </span>}
-          <a href="javascript:void(0)" onClick={() => setShow(prev => !prev)}><AudioButton src={lore} >
-         </AudioButton>  </a>
+          <a href="javascript:void(0)" onClick={() => setShow(prev => !prev)}>{!show? "...read more" : " show less"}  </a>
           
       </>
     );
@@ -297,13 +297,14 @@ function App() {
       {/* <ScrollUpButton /> */}
         <Container >
           <div className='banner-main' id="home">
-            <h6>welcome to killer </h6>
+            {/* <h6>welcome to <span>k</span>iller </h6> */}
             <div className="main">
       
     </div>
-            <h1 data-aos="fade-down">club House</h1>
+            <h1 data-aos="fade-down" id="lore"><span>k</span>iller <br /><span>c</span>lub <span>H</span>ouse</h1>
             <p>
-            There are some things that should be left hidden. That should be ignored and forgotten.
+            <a href="javascript:void(0)" className='play-audio' ><AudioButton src={lore}>
+         </AudioButton></a>There are some things that should be left hidden. That should be ignored and forgotten.
              Left to the sands of time. Buried deep below, to never again bear witness to the celestial skies.
               Some evils are… older… than we can possibly fathom with our feeble faculties. <Search />
             </p>
@@ -343,7 +344,7 @@ function App() {
             <div className='about-txt'>
               <h2 className='big-txt' >about us</h2>
               <div className='abt-headings'>
-              <h3 className='small-txt'>killer club House about</h3>
+              <h3 className='small-txt'><b>K</b>iller <b>C</b>lub <b>H</b>ouse about</h3>
               <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
                  standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make
                   a type specimen book. It has survived not only five centuries, but also the leap into electronic.</p>
@@ -372,14 +373,14 @@ function App() {
                   was a skilled butcher by trade, while his wife was a 
                   homemaker as was common for married women of the time.
                    Wishing to raise their two young children in a more 
-                   traditional manner, and after coming into a small inheritance,
+                   traditional manner and after coming into a small inheritance,
                     the family left the city and headed into the countryside. </p>
                     <p>The year was 1892. As the Connor family was searching for a plot 
                       of land to settle, all the locals they talked to seemed anxious to
                        leave. They frequently would bargain downward to try and secure a
                         quick deal, as only the Connors had come looking to buy in God knows
                          how long. In search of their motivations, Mr. Connor gathered a few
-                          rumors referencing a “blasted heath” nearby, and a cloud of madness 
+                          rumors referencing a “blasted heath” nearby and a cloud of madness 
                           that surrounded the now decade deceased owners. </p>
                 </Col>
               </Row>
@@ -390,7 +391,7 @@ function App() {
            but the surrounding countryside clearly flourished, 
            with no evidence of a spreading plant disease or unchecked
             insect infestation. Not ones to let superstition get the
-             best of them, and capitalizing on the desperation of 
+             best of them and capitalizing on the desperation of 
              the locals, the Connors purchased several farms adjacent
               to the “blasted heath,” and combined them into an impressive
                estate.</p>
@@ -401,7 +402,7 @@ function App() {
                with tending to the needs of the family in the country manor,
                 as well as its surrounding gardens. Their son was a vibrant 
                 dreamer and gravitated to painting them from time-to-time. 
-                Their daughter was an avid reader, and took to crafting her 
+                Their daughter was an avid reader and took to crafting her 
                 own fairy tales filled with ancient magic and fantastical 
                 creatures. As hoped, the children thrived in rural life, 
                 especially with their newfound friendships with kids from 
@@ -430,9 +431,8 @@ function App() {
                            tastes and smells! The many creatures and performers! 
                            People of all shapes and sizes, colors and creeds, were
                             represented there. Everyone was really into dressing the
-                             part. The carnival was like a melting pot of every festival
-                             , from the height of every empire, selecting only the best 
-                             every corner of the globe had to offer, and bottling it all 
+                             part. The carnival was like a melting pot of every festival from the height of every empire, selecting only the best 
+                             every corner of the globe had to offer and bottling it all 
                              up into one place. What a blessing! What a fine memory for 
                              our children to cherish! The Connors couldn’t help but think. 
                              As the Connors were about to return home, along with the rest 
@@ -474,41 +474,51 @@ function App() {
                     <Nav.Item>
                       <Nav.Link eventKey="second">Phase 2</Nav.Link>
                     </Nav.Item>
-                    <Nav.Item>
+                    {/* <Nav.Item>
                       <Nav.Link eventKey="third">Phase 3</Nav.Link>
-                    </Nav.Item>
+                    </Nav.Item> */}
                   </Nav>
                 </Col>
                 <Col sm={12}>
                   <Tab.Content>
                     <Tab.Pane eventKey="first">
                       <ul>
-                        {/* <li>The Killer Club House contains <b>5555</b> unique gut-wrenching NFTs. </li> */}
-                        <li>Launch our Socials: <b>Website, Discord</b> and <b>Twitter</b>.</li>
-                        <li>Revealing the spine-tingling, bloodcurdling LORE. </li>
-                        <li>Releasing The Killer Club House <b>Story</b> and <b>Comic</b>. </li>
-                        {/* <li>Reaching <b>5555</b> Twitter followers and <b>5555</b> Discord members. </li> */}
-                        <li><b>AMA</b> Session with our highly-enthusiastic and ambitious founder. </li>
-                        <li><b>POLICY ID</b> & <b>MARKET PLACE</b> & <b>VR TRAILER</b>.</li>
-                        <li>Launching The Killer Club House <b>Collection</b>.</li>
+                        <li><b>KCH</b> is full of treats, not tricks. We are here to
+                           provide the Cardano Community with horror year-round.
+                            We’ve been hard at work for eight months putting together
+                             a long-term plan for our community. First, let's go over what
+                              you can expect in the near future:</li>
+                        <li><span>Socials</span>  Launch Twitter, Website and Discord.</li>
+                        <li>
+                        <span>Twitter Spaces </span>We initially plan to join already established spaces to introduce ourselves, followed by an AMA.  Eventually, we will host our own spaces as the community grows.
+                        </li>
+                        <li><span>Community</span>We will be offering many ways to whitelist.<br />Some roles will be based on your interests and activity level. We will also host giveaways, movie nights and trivia</li>
+                        <li><span>Marketing</span>
+                          As the launch draws near, we will be participating in numerous shows from established Cardano influencers. We will also be sharing sneak peaks.</li>
+                        <li><span><b>KCH</b> Rooms</span>
+                        What is a project without NFTs? Our collection will be verified and listed on all relevant marketplaces. At this time, a policy ID will also be provided.
+                        </li>
+                        <li><span>Launch</span>
+                        Our mint will feature 5555 unique gut-wrenching NFTs
+                        </li>
                       </ul>
                     </Tab.Pane>
                     <Tab.Pane eventKey="second">
                       <ul>
-                        <li>Listing the Killer Club House on the <b>MARKET PLACE</b>. </li>
+                      <p><b>Coming Soon</b>. </p>
+                        {/* <li>Listing the <b>K</b>iller <b>C</b>lub <b>H</b>ouse on the <b>MARKET PLACE</b>. </li>
                         <li>RELEASE <b>STAKING</b> & <b>TOKENOMICS</b>.</li>
                         <li>HOLDERS <b>AIR DROP</b>.</li>
-                        {/* <li>BEGIN DEVELOPMENT OF <b>VR ROOMS</b>.</li>
-                        <li>LAUNCH <b>VR EXPERIENCE</b>.</li> */}
+                        
                         <li><b>CNFT-CON BOOTH</b>.</li>
-                        <li>SPECIAL <b>HALLOWEEN DROP</b>.</li>
+                        <li>SPECIAL <b>HALLOWEEN DROP</b>.</li> */}
                       </ul>
                     </Tab.Pane>
-                    <Tab.Pane eventKey="third">
+                    {/* <Tab.Pane eventKey="third">
                       <ul>
-                        <li><b>Coming Soon</b>. </li>
+                        <p><b>Coming Soon</b>. </p>
                       </ul>
-                    </Tab.Pane>
+                    </Tab.Pane> */}
                   </Tab.Content>
                 </Col>
               </Row>
@@ -519,7 +529,7 @@ function App() {
             <div className='team-txt'>
               <h2 className='big-txt' >team</h2>
               <div className='abt-headings'>
-              <h3 className='small-txt'>killer club House team</h3>
+              <h3 className='small-txt'><b>K</b>iller <b>C</b>lub <b>H</b>ouse team</h3>
               </div>
               <div className='team-sub-h'>
                 <h4>FOUNDERS</h4>
@@ -529,8 +539,10 @@ function App() {
                   <div className='team-img'>
                     <img src={t1} />
                     <div className='img-txt'>
-                      <h6>John A</h6>
+                      <h6>John Anderson</h6>
                       <ul>
+                        <li><p><i>JohnA</i></p></li>
+                        <li><p>Lubbock Texas</p></li>
                         <li>
                           <p><b>Twitter:</b> @Johnand94830005</p>
                         </li>
@@ -543,10 +555,12 @@ function App() {
                 </Col>
                 <Col md={6} lg={4} xl={4}>
                   <div className='team-img'>
-                    <img src={t21} />
+                    <img src={t2} />
                     <div className='img-txt'>
-                    <h6>Kryptock</h6>
+                    <h6>Richard Cole</h6>
                       <ul>
+                      <li><p><i>Kryptock</i></p></li>
+                      <li><p>Lubbock Texas</p></li>
                         <li>
                           <p><b>Twitter:</b> @Rcole89</p>
                         </li>
@@ -566,10 +580,10 @@ function App() {
                   <div className='team-img'>
                     <img src={t3} />
                     <div className='img-txt'>
-                    <h6>Flawwed</h6>
+                    <h6>Flawwed1</h6>
                       <ul>
                         <li>
-                          <p><b>Main Host / HR / Project Consultant / Marketing Strategist</b></p>
+                          <p><b>Main Host / HR / Project Lead / Marketing Strategist</b></p>
                         </li>
                         <li>
                           <p><b>Twitter:</b> @Flawwed1Art</p>
@@ -673,6 +687,22 @@ function App() {
                     </div>
                   </div>
                 </Col>
+                <Col md={6} lg={4} xl={4}>
+                  <div className='team-img'>
+                    <img src={t8} />
+                    <div className='img-txt'>
+                    <h6>Professor Grimwald</h6>
+                      <ul>
+                        <li>
+                          <p><b>Project writer </b></p>
+                        </li>
+                        <li>
+                          <p><b>Twitter:</b> @prof_grimwald</p>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </Col>
               </Row>
             </div>
           </div>
@@ -684,40 +714,40 @@ function App() {
               </div>
               <Accordion>
   <Accordion.Item eventKey="0">
-    <Accordion.Header><span>Q1</span><h6>What is Killer Club House? </h6></Accordion.Header>
+    <Accordion.Header><span>Q1</span><h6>What is <b>K</b>iller <b>C</b>lub <b>H</b>ouse? </h6></Accordion.Header>
     <Accordion.Body>
-      <p>Killer Club House is a CNFT experience unlike any other that was created by horror fans for horror fans.</p>
+      <p><b>K</b>iller <b>C</b>lub <b>H</b>ouse is a CNFT experience unlike any other that was created by horror fans for horror fans.</p>
     </Accordion.Body>
   </Accordion.Item>
   <Accordion.Item eventKey="1">
-    <Accordion.Header><span>Q2</span><h6>How do I join the Killer Club House community? 
+    <Accordion.Header><span>Q2</span><h6>How do I join the <b>K</b>iller <b>C</b>lub <b>H</b>ouse community? 
 </h6></Accordion.Header>
     <Accordion.Body>
-    <p>Anyone can join the KCH community by following on 
+    <p>Anyone can join the <b>KCH</b> community by following on 
       Twitter or joining Discord. Our most active, engaged,
        and helpful community members will become “family”.
 </p>
     </Accordion.Body>
   </Accordion.Item>
   <Accordion.Item eventKey="3">
-    <Accordion.Header><span>Q3</span><h6>What are the benefits of joining Killer Club House?</h6></Accordion.Header>
+    <Accordion.Header><span>Q3</span><h6>What are the benefits of joining <b>K</b>iller <b>C</b>lub <b>H</b>ouse?</h6></Accordion.Header>
     <Accordion.Body>
     <p>A strong community is the backbone of any successful project. The possible benefits of a strong community are endless. Meet people that share your passion for horror and help us build a vibrant, influential and united community. 
 </p>   
-<p>There will be other more tangible benefits for KCH holders based on the given roles. 
+<p>There will be other more tangible benefits for <b>KCH</b> holders based on the given roles. 
 We have an ambitious <a href="#road">Roadmap</a> that provides more detail. 
 </p>
  </Accordion.Body>
   </Accordion.Item>
   <Accordion.Item eventKey="4">
-    <Accordion.Header><span>Q4</span><h6>Will Killer Club House be present at CNFT con?  </h6></Accordion.Header>
+    <Accordion.Header><span>Q4</span><h6>Will <b>K</b>iller <b>C</b>lub <b>H</b>ouse be present at CNFT con?  </h6></Accordion.Header>
     <Accordion.Body>
-    <p>Yes. Come by our booth and show us your KCH NFT. We may have a surprise for you!</p>    </Accordion.Body>
+    <p>Yes. Come by our booth and show us your <b>KCH</b> NFT. We may have a surprise for you!</p>    </Accordion.Body>
   </Accordion.Item>
   <Accordion.Item eventKey="5">
     <Accordion.Header><span>Q5</span><h6>How was the artwork created?</h6></Accordion.Header>
     <Accordion.Body>
-    <p>Killer Club House rooms are animated 3D NFTs created with manual generation. </p>
+    <p><b>K</b>iller <b>C</b>lub <b>H</b>ouse rooms are animated 3D NFTs created with manual generation. </p>
     </Accordion.Body>
   </Accordion.Item>
 </Accordion>

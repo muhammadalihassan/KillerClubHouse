@@ -44,7 +44,7 @@ function Header() {
         
     return (
      
-      <div className='main-header header-section' >
+      <div className='main-header header-section'>
          <Container>
           {/* <div className='top-header'>
             <ul>
@@ -70,7 +70,7 @@ function Header() {
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav >
           <Nav.Link exact='true' href={'#home'} onClick={() => {document.getElementById("close-button").click()}}>Home</Nav.Link>
-                <Nav.Link exact='true' href={'#story'} onClick={() => {document.getElementById("close-button").click()}}>story</Nav.Link>
+                <Nav.Link exact='true' href={'#lore'} onClick={() => {document.getElementById("close-button").click()}}>lore</Nav.Link>
                 <Nav.Link exact='true' href={'#road'} onClick={() => {document.getElementById("close-button").click()}}>roadmap</Nav.Link>
                 <Navbar.Brand href={'#home'} onClick={() => {document.getElementById("close-button").click()}} className='des-view'>
             <div className='logo-main'>
