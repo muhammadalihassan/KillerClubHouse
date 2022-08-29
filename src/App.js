@@ -597,7 +597,7 @@ function App() {
                     </div>
                   </div>
                 </Col>
-                <Col md={6} lg={4} xl={4}>
+                {/* <Col md={6} lg={4} xl={4}>
                   <div className='team-img'>
                     <img src={t5} />
                     <div className='img-txt'>
@@ -615,7 +615,7 @@ function App() {
                       </ul>
                     </div>
                   </div>
-                </Col>
+                </Col> */}
                 <Col md={6} lg={4} xl={4}>
                   <div className='team-img'>
                     <img src={t21} />
